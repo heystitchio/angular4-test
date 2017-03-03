@@ -1,0 +1,24 @@
+.card {
+  height: 320px;
+}
+
+.swiper-main,
+.swiper-explore {
+  position: relative;
+}
+
+.swiper-wrapper {
+  padding: 0;
+  list-style: none;
+}
+
+.swiper-main {
+  background-color: #ccc;
+  height: 650px;
+  overflow: hidden;
+}
+
+.swiper-explore {
+  height: 340px;
+  overflow: hidden;
+}

@@ -1,23 +1,30 @@
-import { Component, OnInit } from '@angular/core'
-import { TransferState } from '../modules/transfer-state/transfer-state';
+import { Component, ChangeDetectionStrategy, Inject, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router }                                                                from '@angular/router';
+
+import { AuthModelService }                                                      from './auth/models';
+import { TransferState }                                                         from '../modules/transfer-state'
+
 
 @Component({
-	selector: 'demo-app',
-	template: `
-	  <h1>Universal Demo</h1>
-	  <a routerLink="/">Home</a>
-	  <a routerLink="/lazy">Lazy</a>
-	  <router-outlet></router-outlet>
-	`,
-  styles: [
-    `h1 {
-      color: green;
-    }`
-  ]
+  changeDetection: ChangeDetectionStrategy.Default,
+  encapsulation: ViewEncapsulation.Emulated,
+  selector: 'app',
+  styleUrls: ['./app.component.css'],
+  templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-  constructor(private cache: TransferState) {}
+
+  constructor(
+    public _auth: AuthModelService,
+    public _router: Router,
+    private _tcache: TransferState
+  ){}
+
   ngOnInit() {
-    this.cache.set('cached', true);
+    this._tcache.set('cached', true);
+    this._auth.initAuth();
   }
+  
 }
+
+

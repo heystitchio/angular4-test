@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { TransferState } from './transfer-state';
+import { NgModule }      from '@angular/core';
+import { TransferState } from './';
 
 export function getTransferState(): TransferState {
   const transferState = new TransferState();
@@ -12,6 +12,4 @@ export function getTransferState(): TransferState {
     { provide: TransferState, useFactory: getTransferState }
   ]
 })
-export class BrowserTransferStateModule {
-
-}
+export class BrowserTransferStateModule { }

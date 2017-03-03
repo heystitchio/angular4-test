@@ -1,23 +1,26 @@
 {
   "compilerOptions": {
-		"moduleResolution": "node",
-    "module": "es2015",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "sourceMap": true,
+    "sourceRoot": "src",
     "target": "es5",
-    "noImplicitAny": false,
-    "sourceMap": false,
-		"experimentalDecorators": true,
-		"emitDecoratorMetadata": true,
-		"lib": [
-			"es2016",
-			"dom"
-		],
-		"outDir": "lib"
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": ["es6", "dom"]
   },
-  "include": [
-		"src/**/*"
-	],
-	"angularCompilerOptions": {
-		"genDir": "src/ngfactory",
-		"entryModule": "./src/app/browser-app.module#BrowserAppModule"
-	}
+  "exclude": [
+    "node_modules"
+  ],
+  "angularCompilerOptions": {
+    "debug": false
+  },
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": { "rewriteTsconfig": false }
 }

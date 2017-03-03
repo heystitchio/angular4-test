@@ -1,0 +1,13 @@
+<header *ngIf="!_router.url.includes('login') && !_router.url.includes('signup')">
+  <main-nav></main-nav>
+  <!-- <notice-container></notice-container> -->
+  <!-- <alert-container></alert-container> -->
+</header>
+<main>
+  <!-- <search-container></search-container> -->
+  <router-outlet></router-outlet>
+</main>
+<footer *ngIf="!_router.url.includes('login') && !_router.url.includes('signup')">
+  <!-- <cta-container></cta-container> -->
+  <main-footer></main-footer>
+</footer>
