@@ -22,10 +22,6 @@ import { ROUTES }                              from './routes'
 enableProdMode();
 
 const app = express();
-const ROOT = path.join(path.resolve(__dirname, '..'));
-
-const port = 8000;
-const baseUrl = `http://localhost:${port}`;
 
 app.engine('html', ngExpressEngine({
   aot: true,
@@ -81,14 +77,11 @@ function cacheControl(req, res, next) {
   next();
 }
 
-app.use('/assets', cacheControl, express.static(path.join(__dirname, 'assets'), {maxAge: 30}));
-app.use(cacheControl, express.static(path.join(ROOT, 'dist/client'), {index: false}));
-
 process.on('uncaughtException', function (err) { 
   console.error('Catching uncaught errors to avoid process crash', err);
 });
 
-app.use('/', express.static('dist', {index: false}));
+app.use('/', cacheControl, express.static('dist/client', {index: false}));
 
 ROUTES.forEach(route => {
   app.get(route, (req, res) => {

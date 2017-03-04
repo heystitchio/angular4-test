@@ -33,7 +33,6 @@ export var commonConfig = {
   },
   module: {
     rules: [
-      // TypeScript
       { test: /\.ts$/,   use: ['ts-loader', 'angular2-template-loader'] },
       { test: /\.html$/, use: 'raw-loader' },
       { test: /\.css$/,  use: 'raw-loader' },
@@ -41,7 +40,6 @@ export var commonConfig = {
     ],
   },
   plugins: [
-    // Use commonPlugins.
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
@@ -77,7 +75,7 @@ export var serverPlugins = [
 ];
 export var serverConfig = {
   target: 'node',
-  entry: './src/server', // use the entry file of the node server if everything is ts rather than es5
+  entry: './src/server',
   output: {
     filename: 'index.js',
     path: root('dist/server'),

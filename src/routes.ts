@@ -42,8 +42,10 @@ export const ROUTES: string[] = [
   '/jobs',
 
   // Projects
-  '/project/**',
-  '/project/**/dashboard',
+  '/p/:slug',
+  '/p/:slug/dashboard',
+  '/project/:id',
+  '/project/:id/dashboard',
 
   // Search
   '/search',
@@ -60,12 +62,15 @@ export const ROUTES: string[] = [
   '/trending/teams',
 
   // Teams
-  '/team/**',
-  '/team/**/dashboard',
+  '/t/:slug',
+  '/t/:slug/dashboard',
+  '/team/:id',
+  '/team/:id/dashboard',
 
   // Users
-  'user/**',
+  '/u/:slug',
+  '/user/:id',
 
   // 404
-  '404'
+  '/404'
 ];

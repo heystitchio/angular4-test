@@ -117,7 +117,7 @@ function getPlatformServer(
 }
 
 /**
- * Inject the Universal Cache into the bottom of the <head>
+ * Inject the Universal Cache into the bottom of the <body>
  */
 function injectCache(moduleRef: NgModuleRef<{}>) {
   try {
