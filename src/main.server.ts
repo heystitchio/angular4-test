@@ -1,11 +1,11 @@
 import 'zone.js/dist/zone-node'
 import 'reflect-metadata'
 
-import * as path                               from 'path';
+import * as path                               from 'path'
 import * as express                            from 'express'
 import * as bodyParser                         from 'body-parser'
 import * as cookieParser                       from 'cookie-parser'
-import * as morgan                             from 'morgan';
+import * as morgan                             from 'morgan'
 import * as mcache                             from 'memory-cache'
 const { gzipSync } = require('zlib');
 const accepts = require('accepts');

@@ -1,6 +1,6 @@
-import './shared/lib/rxjs-operators'
+import '../shared/lib/rxjs-operators'
 
-import { NgModule }                       from '@angular/core'
+import { NgModule  }                      from '@angular/core'
 import { ServerModule }                   from '@angular/platform-server'
 
 import { ApolloModule }                   from 'apollo-angular'
@@ -36,7 +36,7 @@ export function getResponse(): any {
     { provide: 'req', useFactory: getRequest },
     { provide: 'res', useFactory: getResponse },
     { provide: 'LRU', useFactory: getServerLRU, deps: [] },
-    { provide: AuthService, useClass: ServerAuthService }
+    { provide: AuthService, useClass: ServerAuthService },
   ]
 })
 export class ServerAppModule {}
