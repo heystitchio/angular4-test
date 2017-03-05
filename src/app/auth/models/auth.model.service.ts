@@ -3,13 +3,13 @@ import 'rxjs/add/operator/filter'
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/merge'
 
-import { Inject, Injectable }      from '@angular/core';
+import { Inject, Injectable }          from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs/Rx';
-import { Action, Reducer, Store }           from '@ngrx/store';
+import { Action, Reducer, Store }      from '@ngrx/store';
 
-import { AUTH_SERVICE, AuthService }     from '../services';
-import { Auth, AuthUser }        from './';
-import { AuthActions }     from '../actions';
+import { AuthService }                 from '../services';
+import { Auth, AuthUser }              from './';
+import { AuthActions }                 from '../actions';
 
 @Injectable()
 export class AuthModelService {
@@ -20,7 +20,7 @@ export class AuthModelService {
   private actions$ = new BehaviorSubject<Action>({type: AuthActions.INIT, payload: null});
 
   constructor(
-    @Inject(AUTH_SERVICE) private _auth: AuthService,
+    @Inject(AuthService) private _auth: AuthService,
     private _store: Store<any>
   ) {
     const store$ = this._store.select<Auth>('auth');

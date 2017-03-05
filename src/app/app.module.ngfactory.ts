@@ -498,7 +498,7 @@ class AppModuleInjector extends import0.ɵNgModuleInjector<import1.AppModule> {
     return this.__Store_53;
   }
   get _AuthModelService_54():import43.AuthModelService {
-    if ((this.__AuthModelService_54 == null)) { (this.__AuthModelService_54 = new import43.AuthModelService(this.parent.get(import115.AUTH_SERVICE),this._Store_53)); }
+    if ((this.__AuthModelService_54 == null)) { (this.__AuthModelService_54 = new import43.AuthModelService(this.parent.get(import115.AuthService),this._Store_53)); }
     return this.__AuthModelService_54;
   }
   get _APP_BASE_HREF_55():any {

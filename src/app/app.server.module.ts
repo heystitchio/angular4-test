@@ -1,9 +1,9 @@
 import './shared/lib/rxjs-operators'
 
-import { NgModule, ErrorHandler, OpaqueToken } from '@angular/core'
+import { NgModule, ErrorHandler, PLATFORM_ID } from '@angular/core'
+import { isPlatformBrowser, isPlatformServer } from '@angular/common'
 import { ReactiveFormsModule }                 from '@angular/forms'
 import { RouterModule }                        from '@angular/router'
-import { Http }                                from '@angular/http'
 import { ServerModule }                        from '@angular/platform-server'
 
 import { ApolloClient }                        from 'apollo-client'
@@ -15,7 +15,7 @@ import { SharedModule }                        from './shared/shared.module'
 import { CacheService, HashService }           from './shared/services/cache'
 import { ApiService }                          from './shared/services/api'
 import { MetaService }                         from './shared/services/meta'
-import { AUTH_SERVICE, ServerAuthService }     from './auth/services'
+import { AuthService, ServerAuthService }     from './auth/services'
 import { ServerTransferStateModule }           from '../modules/transfer-state'
 
 declare var Zone: any
@@ -32,27 +32,29 @@ export function getResponse(): any {
   return Zone.current.get('res') || {};
 }
 
-export function serverAuthServiceFactory(api: ApiService, http: Http, req: any) {
-  return new ServerAuthService(api, http, req);
-}
+export const isBrowser: Boolean = isPlatformBrowser(PLATFORM_ID)
+
+export const isServer: Boolean = isPlatformServer(PLATFORM_ID)
+
 
 @NgModule({
   bootstrap: [AppComponent],
   imports: [
     ServerModule,
     ServerTransferStateModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([], { useHash: false }),
     ApolloModule.withClient(provideClient),
     SharedModule.forRoot(),
 	  AppModule
   ],
   providers: [
-    { provide: 'isBrowser', useValue: false },
-    { provide: 'isServer', useValue: true },
+    { provide: 'isBrowser', useValue: isBrowser },
+    { provide: 'isServer', useValue: isServer },
     { provide: 'req', useFactory: getRequest },
     { provide: 'res', useFactory: getResponse },
     { provide: 'LRU', useFactory: getServerLRU, deps: [] },
-    { provide: AUTH_SERVICE, useFactory: serverAuthServiceFactory, deps: [ApiService, Http, 'req'] },
+    { provide: AuthService, useClass: ServerAuthService },
     CacheService,
     HashService,
     MetaService

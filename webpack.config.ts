@@ -54,7 +54,7 @@ export var clientPlugins = [
 ];
 export var clientConfig = {
   target: 'web',
-  entry: './src/client',
+  entry: './src/main.browser',
   output: {
     path: root('dist/client')
   },
@@ -64,7 +64,7 @@ export var clientConfig = {
     __dirname: true,
     __filename: true,
     process: true,
-    Buffer: false
+    buffer: true
   }
 };
 
@@ -75,7 +75,7 @@ export var serverPlugins = [
 ];
 export var serverConfig = {
   target: 'node',
-  entry: './src/server',
+  entry: './src/main.server',
   output: {
     filename: 'index.js',
     path: root('dist/server'),
@@ -95,7 +95,7 @@ export var serverConfig = {
     __dirname: true,
     __filename: true,
     process: true,
-    Buffer: true
+    buffer: true
   }
 };
 

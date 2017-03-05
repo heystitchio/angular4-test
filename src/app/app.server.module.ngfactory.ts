@@ -58,87 +58,88 @@ import * as import49 from './shared/services/cache/cache.service';
 import * as import50 from '@ngrx/store/src/dispatcher';
 import * as import51 from './shared/services/cache/hash.service';
 import * as import52 from './shared/services/api/api.service';
-import * as import53 from './auth/models/auth.model.service';
-import * as import54 from './shared/services/meta/meta.service';
-import * as import55 from './+about/about.component.ngfactory';
-import * as import56 from './+about/how-it-works/how-it-works.component.ngfactory';
-import * as import57 from './+about/welcome/welcome.component.ngfactory';
-import * as import58 from './+about/who-we-are/who-we-are.component.ngfactory';
-import * as import59 from './+about/press/press.component.ngfactory';
-import * as import60 from './auth/components/login/login.component.ngfactory';
-import * as import61 from './auth/components/signup/signup.component.ngfactory';
-import * as import62 from './+contact/contact.component.ngfactory';
-import * as import63 from './+contact/newsletters/newsletters.component.ngfactory';
-import * as import64 from './create/create.component.ngfactory';
-import * as import65 from './discover/discover.component.ngfactory';
-import * as import66 from './+explore/explore.component.ngfactory';
-import * as import67 from './+explore/featured/featured.component.ngfactory';
-import * as import68 from './+explore/popular/popular.component.ngfactory';
-import * as import69 from './+explore/categories/categories.component.ngfactory';
-import * as import70 from './+help/help.component.ngfactory';
-import * as import71 from './+help/faq/faq.component.ngfactory';
-import * as import72 from './+help/support/support.component.ngfactory';
-import * as import73 from './+highlights/highlights.component.ngfactory';
-import * as import74 from './+jobs/jobs.component.ngfactory';
-import * as import75 from './+project/single/single-project.component.ngfactory';
-import * as import76 from './+project/single/dashboard/project-dashboard.component.ngfactory';
-import * as import77 from './+search/search.component.ngfactory';
-import * as import78 from './+settings/settings.component.ngfactory';
-import * as import79 from './+team/single/single-team.component.ngfactory';
-import * as import80 from './+team/single/dashboard/team-dashboard.component.ngfactory';
-import * as import81 from './+terms/terms.component.ngfactory';
-import * as import82 from './+terms/use/use.component.ngfactory';
-import * as import83 from './+terms/privacy/privacy.component.ngfactory';
-import * as import84 from './+terms/cookies/cookies.component.ngfactory';
-import * as import85 from './+trending/trending.component.ngfactory';
-import * as import86 from './+trending/users/trending-users.component.ngfactory';
-import * as import87 from './+trending/teams/trending-teams.component.ngfactory';
-import * as import88 from './+user/single/single-user.component.ngfactory';
-import * as import89 from './+404/404.component.ngfactory';
-import * as import90 from './app.component.ngfactory';
-import * as import91 from './+about/about.component';
-import * as import92 from './+about/how-it-works/how-it-works.component';
-import * as import93 from './+about/welcome/welcome.component';
-import * as import94 from './+about/who-we-are/who-we-are.component';
-import * as import95 from './+about/press/press.component';
-import * as import96 from './auth/components/login/login.component';
-import * as import97 from './auth/components/signup/signup.component';
-import * as import98 from './+contact/contact.component';
-import * as import99 from './+contact/newsletters/newsletters.component';
-import * as import100 from './create/create.component';
-import * as import101 from './discover/discover.component';
-import * as import102 from './+explore/explore.component';
-import * as import103 from './+explore/featured/featured.component';
-import * as import104 from './+explore/popular/popular.component';
-import * as import105 from './+explore/categories/categories.component';
-import * as import106 from './+help/help.component';
-import * as import107 from './+help/faq/faq.component';
-import * as import108 from './+help/support/support.component';
-import * as import109 from './+highlights/highlights.component';
-import * as import110 from './+jobs/jobs.component';
-import * as import111 from './+project/single/single-project.component';
-import * as import112 from './+project/single/dashboard/project-dashboard.component';
-import * as import113 from './+search/search.component';
-import * as import114 from './+settings/settings.component';
-import * as import115 from './+team/single/single-team.component';
-import * as import116 from './+team/single/dashboard/team-dashboard.component';
-import * as import117 from './+terms/terms.component';
-import * as import118 from './+terms/use/use.component';
-import * as import119 from './+terms/privacy/privacy.component';
-import * as import120 from './+terms/cookies/cookies.component';
-import * as import121 from './+trending/trending.component';
-import * as import122 from './+trending/users/trending-users.component';
-import * as import123 from './+trending/teams/trending-teams.component';
-import * as import124 from './+user/single/single-user.component';
-import * as import125 from './+404/404.component';
-import * as import126 from './apollo.server';
-import * as import127 from 'apollo-angular/build/src/Apollo';
-import * as import128 from './auth/reducers/auth.reducers';
-import * as import129 from 'apollo-angular/build/src/tokens';
-import * as import130 from '@ngrx/store/src/reducer';
-import * as import131 from '@ngrx/store/src/state';
-import * as import132 from '@ngrx/store/src/store';
-import * as import133 from './auth/services/auth.service';
+import * as import53 from './auth/services/auth.server.service';
+import * as import54 from './auth/models/auth.model.service';
+import * as import55 from './shared/services/meta/meta.service';
+import * as import56 from './+about/about.component.ngfactory';
+import * as import57 from './+about/how-it-works/how-it-works.component.ngfactory';
+import * as import58 from './+about/welcome/welcome.component.ngfactory';
+import * as import59 from './+about/who-we-are/who-we-are.component.ngfactory';
+import * as import60 from './+about/press/press.component.ngfactory';
+import * as import61 from './auth/components/login/login.component.ngfactory';
+import * as import62 from './auth/components/signup/signup.component.ngfactory';
+import * as import63 from './+contact/contact.component.ngfactory';
+import * as import64 from './+contact/newsletters/newsletters.component.ngfactory';
+import * as import65 from './create/create.component.ngfactory';
+import * as import66 from './discover/discover.component.ngfactory';
+import * as import67 from './+explore/explore.component.ngfactory';
+import * as import68 from './+explore/featured/featured.component.ngfactory';
+import * as import69 from './+explore/popular/popular.component.ngfactory';
+import * as import70 from './+explore/categories/categories.component.ngfactory';
+import * as import71 from './+help/help.component.ngfactory';
+import * as import72 from './+help/faq/faq.component.ngfactory';
+import * as import73 from './+help/support/support.component.ngfactory';
+import * as import74 from './+highlights/highlights.component.ngfactory';
+import * as import75 from './+jobs/jobs.component.ngfactory';
+import * as import76 from './+project/single/single-project.component.ngfactory';
+import * as import77 from './+project/single/dashboard/project-dashboard.component.ngfactory';
+import * as import78 from './+search/search.component.ngfactory';
+import * as import79 from './+settings/settings.component.ngfactory';
+import * as import80 from './+team/single/single-team.component.ngfactory';
+import * as import81 from './+team/single/dashboard/team-dashboard.component.ngfactory';
+import * as import82 from './+terms/terms.component.ngfactory';
+import * as import83 from './+terms/use/use.component.ngfactory';
+import * as import84 from './+terms/privacy/privacy.component.ngfactory';
+import * as import85 from './+terms/cookies/cookies.component.ngfactory';
+import * as import86 from './+trending/trending.component.ngfactory';
+import * as import87 from './+trending/users/trending-users.component.ngfactory';
+import * as import88 from './+trending/teams/trending-teams.component.ngfactory';
+import * as import89 from './+user/single/single-user.component.ngfactory';
+import * as import90 from './+404/404.component.ngfactory';
+import * as import91 from './app.component.ngfactory';
+import * as import92 from './+about/about.component';
+import * as import93 from './+about/how-it-works/how-it-works.component';
+import * as import94 from './+about/welcome/welcome.component';
+import * as import95 from './+about/who-we-are/who-we-are.component';
+import * as import96 from './+about/press/press.component';
+import * as import97 from './auth/components/login/login.component';
+import * as import98 from './auth/components/signup/signup.component';
+import * as import99 from './+contact/contact.component';
+import * as import100 from './+contact/newsletters/newsletters.component';
+import * as import101 from './create/create.component';
+import * as import102 from './discover/discover.component';
+import * as import103 from './+explore/explore.component';
+import * as import104 from './+explore/featured/featured.component';
+import * as import105 from './+explore/popular/popular.component';
+import * as import106 from './+explore/categories/categories.component';
+import * as import107 from './+help/help.component';
+import * as import108 from './+help/faq/faq.component';
+import * as import109 from './+help/support/support.component';
+import * as import110 from './+highlights/highlights.component';
+import * as import111 from './+jobs/jobs.component';
+import * as import112 from './+project/single/single-project.component';
+import * as import113 from './+project/single/dashboard/project-dashboard.component';
+import * as import114 from './+search/search.component';
+import * as import115 from './+settings/settings.component';
+import * as import116 from './+team/single/single-team.component';
+import * as import117 from './+team/single/dashboard/team-dashboard.component';
+import * as import118 from './+terms/terms.component';
+import * as import119 from './+terms/use/use.component';
+import * as import120 from './+terms/privacy/privacy.component';
+import * as import121 from './+terms/cookies/cookies.component';
+import * as import122 from './+trending/trending.component';
+import * as import123 from './+trending/users/trending-users.component';
+import * as import124 from './+trending/teams/trending-teams.component';
+import * as import125 from './+user/single/single-user.component';
+import * as import126 from './+404/404.component';
+import * as import127 from './apollo.server';
+import * as import128 from 'apollo-angular/build/src/Apollo';
+import * as import129 from './auth/reducers/auth.reducers';
+import * as import130 from 'apollo-angular/build/src/tokens';
+import * as import131 from '@ngrx/store/src/reducer';
+import * as import132 from '@ngrx/store/src/state';
+import * as import133 from '@ngrx/store/src/store';
+import * as import134 from './auth/services/auth.service';
 class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerAppModule> {
   _HttpModule_0:import2.HttpModule;
   _CommonModule_1:import3.CommonModule;
@@ -243,8 +244,8 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
   __HashService_100:import51.HashService;
   __ApiService_101:import52.ApiService;
   __req_102:any;
-  __AUTH_SERVICE_103:any;
-  __AuthModelService_104:import53.AuthModelService;
+  __AuthService_103:import53.ServerAuthService;
+  __AuthModelService_104:import54.AuthModelService;
   __APP_BASE_HREF_105:any;
   __ROUTER_CONFIGURATION_106:any;
   __LocationStrategy_107:any;
@@ -262,47 +263,47 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
   __APP_BOOTSTRAP_LISTENER_119:any[];
   __isBrowser_120:any;
   __res_121:any;
-  __MetaService_122:import54.MetaService;
+  __MetaService_122:import55.MetaService;
   constructor(parent:import0.Injector) {
     super(parent,[
-      import55.AboutComponentNgFactory,
-      import56.HowItWorksComponentNgFactory,
-      import57.WelcomeComponentNgFactory,
-      import58.WhoWeAreComponentNgFactory,
-      import59.PressComponentNgFactory,
-      import60.LoginComponentNgFactory,
-      import61.SignupComponentNgFactory,
-      import62.ContactComponentNgFactory,
-      import63.NewslettersComponentNgFactory,
-      import64.CreateComponentNgFactory,
-      import65.DiscoverComponentNgFactory,
-      import66.ExploreComponentNgFactory,
-      import67.FeaturedComponentNgFactory,
-      import68.PopularComponentNgFactory,
-      import69.CategoriesComponentNgFactory,
-      import70.HelpComponentNgFactory,
-      import71.FaqComponentNgFactory,
-      import72.SupportComponentNgFactory,
-      import73.HighlightsComponentNgFactory,
-      import74.JobsComponentNgFactory,
-      import75.SingleProjectComponentNgFactory,
-      import76.ProjectDashboardComponentNgFactory,
-      import77.SearchComponentNgFactory,
-      import78.SettingsComponentNgFactory,
-      import79.SingleTeamComponentNgFactory,
-      import80.TeamDashboardComponentNgFactory,
-      import81.TermsComponentNgFactory,
-      import82.UseComponentNgFactory,
-      import83.PrivacyComponentNgFactory,
-      import84.CookiesComponentNgFactory,
-      import85.TrendingComponentNgFactory,
-      import86.TrendingUsersComponentNgFactory,
-      import87.TrendingTeamsComponentNgFactory,
-      import88.SingleUserComponentNgFactory,
-      import89.NotFoundComponentNgFactory,
-      import90.AppComponentNgFactory
+      import56.AboutComponentNgFactory,
+      import57.HowItWorksComponentNgFactory,
+      import58.WelcomeComponentNgFactory,
+      import59.WhoWeAreComponentNgFactory,
+      import60.PressComponentNgFactory,
+      import61.LoginComponentNgFactory,
+      import62.SignupComponentNgFactory,
+      import63.ContactComponentNgFactory,
+      import64.NewslettersComponentNgFactory,
+      import65.CreateComponentNgFactory,
+      import66.DiscoverComponentNgFactory,
+      import67.ExploreComponentNgFactory,
+      import68.FeaturedComponentNgFactory,
+      import69.PopularComponentNgFactory,
+      import70.CategoriesComponentNgFactory,
+      import71.HelpComponentNgFactory,
+      import72.FaqComponentNgFactory,
+      import73.SupportComponentNgFactory,
+      import74.HighlightsComponentNgFactory,
+      import75.JobsComponentNgFactory,
+      import76.SingleProjectComponentNgFactory,
+      import77.ProjectDashboardComponentNgFactory,
+      import78.SearchComponentNgFactory,
+      import79.SettingsComponentNgFactory,
+      import80.SingleTeamComponentNgFactory,
+      import81.TeamDashboardComponentNgFactory,
+      import82.TermsComponentNgFactory,
+      import83.UseComponentNgFactory,
+      import84.PrivacyComponentNgFactory,
+      import85.CookiesComponentNgFactory,
+      import86.TrendingComponentNgFactory,
+      import87.TrendingUsersComponentNgFactory,
+      import88.TrendingTeamsComponentNgFactory,
+      import89.SingleUserComponentNgFactory,
+      import90.NotFoundComponentNgFactory,
+      import91.AppComponentNgFactory
     ]
-    ,[import90.AppComponentNgFactory]);
+    ,[import91.AppComponentNgFactory]);
   }
   get _BrowserXhr_50():import5.ɵc {
     if ((this.__BrowserXhr_50 == null)) { (this.__BrowserXhr_50 = new import5.ɵc()); }
@@ -430,27 +431,27 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
       [
         {
           path: 'about',
-          component: import91.AboutComponent
+          component: import92.AboutComponent
         }
         ,
         {
           path: 'about/how-it-works',
-          component: import92.HowItWorksComponent
+          component: import93.HowItWorksComponent
         }
         ,
         {
           path: 'about/welcome',
-          component: import93.WelcomeComponent
+          component: import94.WelcomeComponent
         }
         ,
         {
           path: 'about/who-we-are',
-          component: import94.WhoWeAreComponent
+          component: import95.WhoWeAreComponent
         }
         ,
         {
           path: 'about/press',
-          component: import95.PressComponent
+          component: import96.PressComponent
         }
 
       ]
@@ -458,12 +459,12 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
       [
         {
           path: 'login',
-          component: import96.LoginComponent
+          component: import97.LoginComponent
         }
         ,
         {
           path: 'signup',
-          component: import97.SignupComponent
+          component: import98.SignupComponent
         }
 
       ]
@@ -471,45 +472,45 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
       [
         {
           path: 'contact',
-          component: import98.ContactComponent
+          component: import99.ContactComponent
         }
         ,
         {
           path: 'newsletters',
-          component: import99.NewslettersComponent
+          component: import100.NewslettersComponent
         }
 
       ]
       ,
         [{
           path: 'create',
-          component: import100.CreateComponent
+          component: import101.CreateComponent
         }
       ],
         [{
           path: 'discover',
-          component: import101.DiscoverComponent
+          component: import102.DiscoverComponent
         }
       ],
       [
         {
           path: 'explore',
-          component: import102.ExploreComponent
+          component: import103.ExploreComponent
         }
         ,
         {
           path: 'explore/featured',
-          component: import103.FeaturedComponent
+          component: import104.FeaturedComponent
         }
         ,
         {
           path: 'explore/popular',
-          component: import104.PopularComponent
+          component: import105.PopularComponent
         }
         ,
         {
           path: 'explore/categories',
-          component: import105.CategoriesComponent
+          component: import106.CategoriesComponent
         }
 
       ]
@@ -517,73 +518,73 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
       [
         {
           path: 'help',
-          component: import106.HelpComponent
+          component: import107.HelpComponent
         }
         ,
         {
           path: 'help/faq',
-          component: import107.FaqComponent
+          component: import108.FaqComponent
         }
         ,
         {
           path: 'help/support',
-          component: import108.SupportComponent
+          component: import109.SupportComponent
         }
 
       ]
       ,
         [{
           path: 'highlights',
-          component: import109.HighlightsComponent
+          component: import110.HighlightsComponent
         }
       ],
         [{
           path: 'jobs',
-          component: import110.JobsComponent
+          component: import111.JobsComponent
         }
       ],
       [
         {
           path: 'project/:slug',
-          component: import111.SingleProjectComponent
+          component: import112.SingleProjectComponent
         }
         ,
         {
           path: 'project/:slug/dashboard',
-          component: import112.ProjectDashboardComponent
+          component: import113.ProjectDashboardComponent
         }
         ,
         {
           path: 'project/:slug/dashboard/applications',
-          component: import112.ProjectDashboardComponent
+          component: import113.ProjectDashboardComponent
         }
         ,
         {
           path: 'project/:slug/dashboard/application/:application_id',
-          component: import112.ProjectDashboardComponent
+          component: import113.ProjectDashboardComponent
         }
 
       ]
       ,
         [{
           path: 'search',
-          component: import113.SearchComponent
+          component: import114.SearchComponent
         }
       ],
         [{
           path: 'settings',
-          component: import114.SettingsComponent
+          component: import115.SettingsComponent
         }
       ],
       [
         {
           path: 'team/:slug',
-          component: import115.SingleTeamComponent
+          component: import116.SingleTeamComponent
         }
         ,
         {
           path: 'team/:slug/dashboard',
-          component: import116.TeamDashboardComponent
+          component: import117.TeamDashboardComponent
         }
 
       ]
@@ -591,22 +592,22 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
       [
         {
           path: 'terms',
-          component: import117.TermsComponent
+          component: import118.TermsComponent
         }
         ,
         {
           path: 'terms/use',
-          component: import118.UseComponent
+          component: import119.UseComponent
         }
         ,
         {
           path: 'terms/privacy',
-          component: import119.PrivacyComponent
+          component: import120.PrivacyComponent
         }
         ,
         {
           path: 'terms/cookies',
-          component: import120.CookiesComponent
+          component: import121.CookiesComponent
         }
 
       ]
@@ -614,24 +615,24 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
       [
         {
           path: 'trending',
-          component: import121.TrendingComponent
+          component: import122.TrendingComponent
         }
         ,
         {
           path: 'trending/users',
-          component: import122.TrendingUsersComponent
+          component: import123.TrendingUsersComponent
         }
         ,
         {
           path: 'trending/teams',
-          component: import123.TrendingTeamsComponent
+          component: import124.TrendingTeamsComponent
         }
 
       ]
       ,
         [{
           path: 'user/:slug',
-          component: import124.SingleUserComponent
+          component: import125.SingleUserComponent
         }
       ],
         [{
@@ -643,7 +644,7 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
       [
         {
           path: '404',
-          component: import125.NotFoundComponent
+          component: import126.NotFoundComponent
         }
         ,
         {
@@ -663,15 +664,15 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
     return this.__isServer_86;
   }
   get _CLIENT_MAP_WRAPPER_87():any {
-    if ((this.__CLIENT_MAP_WRAPPER_87 == null)) { (this.__CLIENT_MAP_WRAPPER_87 = import126.provideClient); }
+    if ((this.__CLIENT_MAP_WRAPPER_87 == null)) { (this.__CLIENT_MAP_WRAPPER_87 = import127.provideClient); }
     return this.__CLIENT_MAP_WRAPPER_87;
   }
   get _CLIENT_MAP_88():any {
-    if ((this.__CLIENT_MAP_88 == null)) { (this.__CLIENT_MAP_88 = import127.getClientMap(this._CLIENT_MAP_WRAPPER_87)); }
+    if ((this.__CLIENT_MAP_88 == null)) { (this.__CLIENT_MAP_88 = import128.getClientMap(this._CLIENT_MAP_WRAPPER_87)); }
     return this.__CLIENT_MAP_88;
   }
   get _Apollo_89():any {
-    if ((this.__Apollo_89 == null)) { (this.__Apollo_89 = import127.createApollo(this._CLIENT_MAP_88)); }
+    if ((this.__Apollo_89 == null)) { (this.__Apollo_89 = import128.createApollo(this._CLIENT_MAP_88)); }
     return this.__Apollo_89;
   }
   get _LRU_90():any {
@@ -687,7 +688,7 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
     return this.__Dispatcher_92;
   }
   get __INITIAL_REDUCER_93():any {
-    if ((this.___INITIAL_REDUCER_93 == null)) { (this.___INITIAL_REDUCER_93 = {auth: import128.authReducer}); }
+    if ((this.___INITIAL_REDUCER_93 == null)) { (this.___INITIAL_REDUCER_93 = {auth: import129.authReducer}); }
     return this.___INITIAL_REDUCER_93;
   }
   get _INITIAL_REDUCER_94():any {
@@ -726,12 +727,12 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
     if ((this.__req_102 == null)) { (this.__req_102 = import1.getRequest()); }
     return this.__req_102;
   }
-  get _AUTH_SERVICE_103():any {
-    if ((this.__AUTH_SERVICE_103 == null)) { (this.__AUTH_SERVICE_103 = import1.serverAuthServiceFactory(this._ApiService_101,this._Http_55,this._req_102)); }
-    return this.__AUTH_SERVICE_103;
+  get _AuthService_103():import53.ServerAuthService {
+    if ((this.__AuthService_103 == null)) { (this.__AuthService_103 = new import53.ServerAuthService(this._ApiService_101,this._Http_55,this._req_102)); }
+    return this.__AuthService_103;
   }
-  get _AuthModelService_104():import53.AuthModelService {
-    if ((this.__AuthModelService_104 == null)) { (this.__AuthModelService_104 = new import53.AuthModelService(this._AUTH_SERVICE_103,this._Store_99)); }
+  get _AuthModelService_104():import54.AuthModelService {
+    if ((this.__AuthModelService_104 == null)) { (this.__AuthModelService_104 = new import54.AuthModelService(this._AuthService_103,this._Store_99)); }
     return this.__AuthModelService_104;
   }
   get _APP_BASE_HREF_105():any {
@@ -790,8 +791,8 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
     if ((this.__res_121 == null)) { (this.__res_121 = import1.getResponse()); }
     return this.__res_121;
   }
-  get _MetaService_122():import54.MetaService {
-    if ((this.__MetaService_122 == null)) { (this.__MetaService_122 = new import54.MetaService(this._isServer_86,this._Title_81,this._Meta_80)); }
+  get _MetaService_122():import55.MetaService {
+    if ((this.__MetaService_122 == null)) { (this.__MetaService_122 = new import55.MetaService(this._isServer_86,this._Title_81,this._Meta_80)); }
     return this.__MetaService_122;
   }
   createInternal():import1.ServerAppModule {
@@ -948,24 +949,24 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
     if ((token === import9.ɵi)) { return this._ɵi_84; }
     if ((token === import7.ROUTES)) { return this._ROUTES_85; }
     if ((token === 'isServer')) { return this._isServer_86; }
-    if ((token === import129.CLIENT_MAP_WRAPPER)) { return this._CLIENT_MAP_WRAPPER_87; }
-    if ((token === import129.CLIENT_MAP)) { return this._CLIENT_MAP_88; }
-    if ((token === import127.Apollo)) { return this._Apollo_89; }
+    if ((token === import130.CLIENT_MAP_WRAPPER)) { return this._CLIENT_MAP_WRAPPER_87; }
+    if ((token === import130.CLIENT_MAP)) { return this._CLIENT_MAP_88; }
+    if ((token === import128.Apollo)) { return this._Apollo_89; }
     if ((token === 'LRU')) { return this._LRU_90; }
     if ((token === import49.CacheService)) { return this._CacheService_91; }
     if ((token === import50.Dispatcher)) { return this._Dispatcher_92; }
     if ((token === import46._INITIAL_REDUCER)) { return this.__INITIAL_REDUCER_93; }
     if ((token === import46.INITIAL_REDUCER)) { return this._INITIAL_REDUCER_94; }
-    if ((token === import130.Reducer)) { return this._Reducer_95; }
+    if ((token === import131.Reducer)) { return this._Reducer_95; }
     if ((token === import46._INITIAL_STATE)) { return this.__INITIAL_STATE_96; }
     if ((token === import46.INITIAL_STATE)) { return this._INITIAL_STATE_97; }
-    if ((token === import131.State)) { return this._State_98; }
-    if ((token === import132.Store)) { return this._Store_99; }
+    if ((token === import132.State)) { return this._State_98; }
+    if ((token === import133.Store)) { return this._Store_99; }
     if ((token === import51.HashService)) { return this._HashService_100; }
     if ((token === import52.ApiService)) { return this._ApiService_101; }
     if ((token === 'req')) { return this._req_102; }
-    if ((token === import133.AUTH_SERVICE)) { return this._AUTH_SERVICE_103; }
-    if ((token === import53.AuthModelService)) { return this._AuthModelService_104; }
+    if ((token === import134.AuthService)) { return this._AuthService_103; }
+    if ((token === import54.AuthModelService)) { return this._AuthModelService_104; }
     if ((token === import3.APP_BASE_HREF)) { return this._APP_BASE_HREF_105; }
     if ((token === import7.ROUTER_CONFIGURATION)) { return this._ROUTER_CONFIGURATION_106; }
     if ((token === import3.LocationStrategy)) { return this._LocationStrategy_107; }
@@ -983,7 +984,7 @@ class ServerAppModuleInjector extends import0.ɵNgModuleInjector<import1.ServerA
     if ((token === import0.APP_BOOTSTRAP_LISTENER)) { return this._APP_BOOTSTRAP_LISTENER_119; }
     if ((token === 'isBrowser')) { return this._isBrowser_120; }
     if ((token === 'res')) { return this._res_121; }
-    if ((token === import54.MetaService)) { return this._MetaService_122; }
+    if ((token === import55.MetaService)) { return this._MetaService_122; }
     return notFoundResult;
   }
   destroyInternal():void {

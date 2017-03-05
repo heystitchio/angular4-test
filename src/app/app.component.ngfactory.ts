@@ -90,7 +90,8 @@ export function View_AppComponent_0():import1.ɵViewDefinition {
         0,
         'ngIf'
       ]
-    },(null as any))
+    },(null as any)),
+    import1.ɵted((null as any),['\n'])
   ]
   ,(check,view) => {
     var comp:import10.AppComponent = view.component;

@@ -9,7 +9,7 @@
     "clean:dist": "rimraf dist",
     "clean:ngc": "rimraf **/*.ngfactory.ts **/*.css.shim.ts **/*.css.shim.ngstyle.ts **/*.ngsummary.json",
     "prebuild": "npm run clean:dist",
-    "build": "webpack  --progress",
+    "build": "webpack --progress",
     "build:prod:ngc": "npm run clean:ngc && npm run ngc && npm run clean:dist && npm run build:prod",
     "build:prod:ngc:json": "npm run clean:ngc && npm run ngc && npm run clean:dist && npm run build:prod:json",
     "build:prod": "webpack --config webpack.prod.config.ts",

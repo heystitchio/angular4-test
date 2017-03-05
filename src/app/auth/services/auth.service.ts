@@ -1,7 +1,7 @@
 import { OpaqueToken } from '@angular/core';
 
 
-export let AUTH_SERVICE = new OpaqueToken('auth.service');
+export let AuthService = new OpaqueToken('auth.service');
 
 export interface AuthService {
 

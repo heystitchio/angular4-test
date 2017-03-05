@@ -70,7 +70,7 @@ class AuthModuleInjector extends import0.ɵNgModuleInjector<import1.AuthModule> 
     return this.__ROUTES_11;
   }
   get _AuthModelService_12():import8.AuthModelService {
-    if ((this.__AuthModelService_12 == null)) { (this.__AuthModelService_12 = new import8.AuthModelService(this.parent.get(import13.AUTH_SERVICE),this.parent.get(import14.Store))); }
+    if ((this.__AuthModelService_12 == null)) { (this.__AuthModelService_12 = new import8.AuthModelService(this.parent.get(import13.AuthService),this.parent.get(import14.Store))); }
     return this.__AuthModelService_12;
   }
   createInternal():import1.AuthModule {

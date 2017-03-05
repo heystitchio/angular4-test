@@ -1,5 +1,3 @@
-//hacky express wrapper thingy.
-
 import * as fs from 'fs';
 import { Request, Response, Send } from 'express';
 import { Provider, NgModuleFactory, NgZone, NgModuleRef, PlatformRef, ApplicationRef, Type } from '@angular/core';
