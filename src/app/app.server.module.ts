@@ -32,9 +32,9 @@ export function getResponse(): any {
   return Zone.current.get('res') || {};
 }
 
-export const isBrowser: Boolean = isPlatformBrowser(PLATFORM_ID)
+const isBrowser: Boolean = isPlatformBrowser(PLATFORM_ID)
 
-export const isServer: Boolean = isPlatformServer(PLATFORM_ID)
+const isServer: Boolean = isPlatformServer(PLATFORM_ID)
 
 
 @NgModule({

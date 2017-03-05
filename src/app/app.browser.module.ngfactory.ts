@@ -739,7 +739,7 @@ class BrowserAppModuleInjector extends import0.ɵNgModuleInjector<import1.Browse
     return this.__APP_BOOTSTRAP_LISTENER_110;
   }
   get _isBrowser_111():any {
-    if ((this.__isBrowser_111 == null)) { (this.__isBrowser_111 = true); }
+    if ((this.__isBrowser_111 == null)) { (this.__isBrowser_111 = false); }
     return this.__isBrowser_111;
   }
   get _MetaService_112():import53.MetaService {

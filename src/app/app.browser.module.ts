@@ -29,9 +29,9 @@ export function browserAuthServiceFactory(cookie: CookieService, api: ApiService
   return new BrowserAuthService(cookie, api, http);
 }
 
-export const isBrowser: Boolean = isPlatformBrowser(PLATFORM_ID)
+const isBrowser: Boolean = isPlatformBrowser(PLATFORM_ID)
 
-export const isServer: Boolean = isPlatformServer(PLATFORM_ID)
+const isServer: Boolean = isPlatformServer(PLATFORM_ID)
 
 Raven
   .config('https://e090d88b54a342fba41842bf5a5f9d83@sentry.io/142633', {
