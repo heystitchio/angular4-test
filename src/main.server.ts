@@ -15,7 +15,7 @@ const interceptor = require('express-interceptor');
 import { enableProdMode }                      from '@angular/core'
 import { platformServer, renderModuleFactory } from '@angular/platform-server'
 
-import { ServerAppModuleNgFactory }            from './app/app.server.module.ngfactory'
+import { ServerAppModuleNgFactory }            from './app/_platform/app.server.module.ngfactory'
 import { ngExpressEngine }                     from './modules/ng-express-engine/express-engine'
 import { ROUTES }                              from './routes'
 

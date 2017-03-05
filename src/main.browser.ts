@@ -7,7 +7,7 @@ import 'swiper'
 
 import { enableProdMode }            from '@angular/core'
 import { platformBrowser }           from '@angular/platform-browser'
-import { BrowserAppModuleNgFactory } from './app/app.browser.module.ngfactory'
+import { BrowserAppModuleNgFactory } from './app/_platform/app.browser.module.ngfactory'
 
 enableProdMode();
 
