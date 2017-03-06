@@ -75,7 +75,7 @@ export const clientPlugins = [
 
   new webpack.optimize.UglifyJsPlugin({
     // beautify: true,
-    // mangle: false,
+    mangle: false,
     output: {
       comments: false
     },

@@ -3,8 +3,6 @@ import { CommonModule }                     from '@angular/common'
 import { RouterModule }                     from '@angular/router'
 import { ReactiveFormsModule }              from '@angular/forms'
 
-import { CookieService }                    from 'angular2-cookie/services/cookies.service'
-
 import { SharedComponentsModule }           from './components/components.module'
 import { ApiService }                       from './services/api'
 import { CacheService, HashService }        from './services/cache'
@@ -30,8 +28,7 @@ const PROVIDERS = [
   CacheService,
   HashService,
   MetaService,
-  ApiService,
-  CookieService
+  ApiService
 ]
 
 @NgModule({

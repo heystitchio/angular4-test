@@ -6,6 +6,8 @@ import { BrowserModule }                   from '@angular/platform-browser'
 import { ApolloModule }                    from 'apollo-angular'
 import { provideBrowserClient }            from './'
 
+import { CookieService }                   from 'angular2-cookie/services/cookies.service'
+
 import { BrowserTransferStateModule }      from '../../modules/transfer-state';
 import { CommonAppModule }                 from './'
 import { AppComponent }                    from '../'
@@ -15,6 +17,10 @@ import * as Raven from 'raven-js'
 
 export function getBrowserLRU(lru?: any) {
   return lru || new Map();
+}
+
+export function cookieServiceFactory(): CookieService {
+  return new CookieService();
 }
 
 Raven
@@ -43,7 +49,8 @@ export class RavenErrorHandler implements ErrorHandler {
   providers: [
     { provide: 'LRU', useFactory: getBrowserLRU, deps: [] },
     { provide: AuthService, useClass: BrowserAuthService },
-    { provide: ErrorHandler, useClass: RavenErrorHandler }
+    { provide: ErrorHandler, useClass: RavenErrorHandler },
+    { provide: CookieService, useFactory: cookieServiceFactory }
   ]
 })
 export class BrowserAppModule {}
