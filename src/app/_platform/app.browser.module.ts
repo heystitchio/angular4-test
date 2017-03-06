@@ -9,7 +9,7 @@ import { provideBrowserClient }            from './'
 import { BrowserTransferStateModule }      from '../../modules/transfer-state';
 import { CommonAppModule }                 from './'
 import { AppComponent }                    from '../'
-import { AuthService, BrowserAuthService } from '../auth/services'
+import { AuthService, BrowserAuthService } from '../auth'
 
 import * as Raven from 'raven-js'
 

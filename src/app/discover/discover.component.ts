@@ -1,11 +1,8 @@
-import { Component, OnInit, Inject, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Inject, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core'
 
-import { MetaService, MetaDefinition } from '../shared/services/meta';
-import { ApiService } from '../shared/services/api/api.service';
-import gql from 'graphql-tag';
-
-import { Project } from '../shared/models/project/project';
-import { User } from '../shared/models/user/user';
+import { MetaService, MetaDefinition }                                           from '../shared/services/meta'
+import { ApiService }                                                            from '../shared/services/api';
+import gql                                                                       from 'graphql-tag';
 
 import * as $ from 'jquery';
 declare var Swiper:any;
@@ -19,19 +16,17 @@ declare var Swiper:any;
   templateUrl: './discover.component.html'
 })
 export class DiscoverComponent implements OnInit {
-  slides: Project[] = [];
-  explore: Project[] = [];
-  recommended: Project[] = [];
-  users: User[] = [];
+  slides: any[] = [];
+  explore: any[] = [];
+  recommended: any[] = [];
+  users: any[] = [];
   meta: MetaDefinition[] = [];
 
   constructor(
-    @Inject('isBrowser') private _isBrowser:Boolean,
+    @Inject('isBrowser') private _isBrowser: Boolean,
     private _meta: MetaService,
     private _api: ApiService
   ) {
-    // we need the data synchronously for the client to set the server response
-    // we create another method so we have more control for testing
     this.universalInit();
 
     this.meta = [
@@ -66,7 +61,7 @@ export class DiscoverComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._meta.setTitle('Discover')
+    this._meta.setTitle('Discover');
     this._meta.addTags(this.meta);
 
     if (this._isBrowser) {

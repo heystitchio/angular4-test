@@ -9,7 +9,7 @@ import { provideServerClient }                      from './'
 import { TransferState, ServerTransferStateModule } from '../../modules/transfer-state'
 import { CommonAppModule }                          from './'
 import { AppComponent }                             from '../'
-import { AuthService, ServerAuthService }           from '../auth/services'
+import { AuthService, ServerAuthService }           from '../auth'
 
 declare var Zone: any
 

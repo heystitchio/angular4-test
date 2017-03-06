@@ -6,7 +6,7 @@ import { Router }                 from '@angular/router';
 import { Subscription }           from 'rxjs/Subscription';
 
 import { AuthModelService,
-         AuthUser }               from '../../../auth/models';
+         AuthUser }               from '../../../auth';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.Default,

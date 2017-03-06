@@ -12,7 +12,7 @@ import { ApolloClient, ApolloQueryResult, WatchQueryOptions, MutationOptions, Su
 
 import { CacheService  }         from './../cache'
 import { HashService  }          from './../cache'
-import { Auth }                  from '../../../auth/models'
+import { Auth }                  from '../../../auth'
 
 
 @Injectable()

@@ -6,9 +6,8 @@ import { HttpModule }                  from '@angular/http';
 import { RouterModule }                from '@angular/router';
 
 import { StoreModule }                 from '@ngrx/store';
-import { authReducer }                 from './auth/reducers';
 
-import { AuthModule }                   from './auth/modules';
+import { authReducer, AuthModule }     from './auth';
 import { CreateModule }                 from './create/create.module';
 import { DiscoverModule }               from './discover/discover.module';
 import { AboutModule }                  from './+about/about.module';

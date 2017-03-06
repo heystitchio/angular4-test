@@ -1,8 +1,8 @@
 import { Component, ChangeDetectionStrategy, Inject, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router }                                                                from '@angular/router';
 
-import { AuthModelService }                                                      from './auth/models';
-// import { TransferState }                                                         from '../modules/transfer-state'
+import { AuthModelService }                                                      from './auth';
+import { TransferState }                                                         from '../modules/transfer-state'
 
 
 @Component({
@@ -17,11 +17,11 @@ export class AppComponent implements OnInit {
   constructor(
     public _auth: AuthModelService,
     public _router: Router,
-    //private _tcache: TransferState
+    private _tcache: TransferState
   ){}
 
   ngOnInit() {
-    //this._tcache.set('cached', true);
+    this._tcache.set('cached', true);
     this._auth.initAuth();
   }
   

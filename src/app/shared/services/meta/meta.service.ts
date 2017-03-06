@@ -1,5 +1,6 @@
-import { Injectable, Inject }          from '@angular/core'
-import { Title, Meta, MetaDefinition } from '@angular/platform-browser'
+import { Injectable, Inject } from '@angular/core'
+import { Title, Meta }        from '@angular/platform-browser'
+import { MetaDefinition }     from './'
 
 
 @Injectable()
