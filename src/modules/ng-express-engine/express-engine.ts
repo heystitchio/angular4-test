@@ -1,7 +1,9 @@
-import * as fs                                                                       from 'fs'
-import { Request, Response, Send }                                                   from 'express'
-import { Provider, NgModuleFactory, NgModuleRef, PlatformRef, ApplicationRef, Type } from '@angular/core'
-import { platformServer, platformDynamicServer, PlatformState, INITIAL_CONFIG }      from '@angular/platform-server'
+import * as fs                                   from 'fs'
+import { Request, Response, Send }               from 'express'
+import { Provider, NgModuleFactory, NgModuleRef,
+         PlatformRef, ApplicationRef, Type }     from '@angular/core'
+import { platformServer, platformDynamicServer,
+         PlatformState, INITIAL_CONFIG }         from '@angular/platform-server'
 
 /**
  * These are the allowed options for the engine
@@ -61,13 +63,13 @@ export function ngExpressEngine(setupOptions: NgSetupOptions) {
 function getReqResProviders(req: Request, res: Response): Provider[] {
   const providers: Provider[] = [
     {
-      provide: 'REQUEST',
+      provide: 'req',
       useValue: req
     }
   ];
   if (res) {
     providers.push({
-      provide: 'RESPONSE',
+      provide: 'res',
       useValue: res
     });
   }

@@ -7,7 +7,7 @@ import { Observable }                              from 'rxjs/Observable'
 import { CookieService }                           from 'angular2-cookie/services/cookies.service'
 import gql                                         from 'graphql-tag'
 
-import { ApiService }                              from '../../shared/services/api'
+import { ApiService }                              from '../../shared'
 import { AuthServiceInterface }                    from '../'
 
 const createUserMutation = gql`
@@ -80,8 +80,6 @@ export class BrowserAuthService implements AuthServiceInterface {
 
   public initAuth(): Observable<Object> {
     var token = this._cookies.get('USID');
-
-    console.log(token);
 
     if (token != null) {
       return this.getUserInfo(token)

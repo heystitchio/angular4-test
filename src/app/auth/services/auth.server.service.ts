@@ -6,7 +6,7 @@ import { Http, Headers, RequestOptions, Response } from '@angular/http'
 import { Observable }                              from 'rxjs/Observable'
 import gql                                         from 'graphql-tag'
 
-import { ApiService }                              from '../../shared/services/api'
+import { ApiService }                              from '../../shared'
 import { AuthServiceInterface }                    from '../'
 
 const authUserQuery = gql`
@@ -38,9 +38,9 @@ export class ServerAuthService implements AuthServiceInterface {
   private options = new RequestOptions({ headers: this.headers })
 
   constructor(
+    @Inject('req') private _req: any,
     private _api: ApiService,
-    private _http: Http,
-    @Inject('req') private _req: any
+    private _http: Http
   ) {}
 
   public signupAndLogin(): void {

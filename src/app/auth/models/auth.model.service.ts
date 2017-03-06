@@ -64,7 +64,7 @@ export class AuthModelService {
       .map(() => ({type: AuthActions.AUTH_LOGOUT_USER_SUCCESS}));
 
     Observable
-      .merge(loginSuccess$, loginFailure$, signupSuccess$, signupFailure$, logouts)
+      .merge(loginSuccess$, loginFailure$, signupSuccess$, signupFailure$, initSuccess$, initFailure$, logouts)
       .subscribe((action: Action) => _store.dispatch(action));
   }
 

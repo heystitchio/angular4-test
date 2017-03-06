@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { NgModule }          from '@angular/core'
+import { RouterModule }      from '@angular/router'
 
-import { DiscoverComponent } from './discover.component';
+import { DiscoverComponent } from '../'
+
 
 @NgModule({
   imports: [

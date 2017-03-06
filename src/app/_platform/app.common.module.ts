@@ -6,7 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { RouterModule }        from '@angular/router'
 
 import { AppModule }           from '../'
-import { SharedModule }        from '../shared/shared.module'
+import { SharedModule }        from '../shared'
 
 
 @NgModule({

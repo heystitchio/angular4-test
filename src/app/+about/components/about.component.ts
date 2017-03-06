@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core'
 
-import { MetaService, MetaDefinition }                                          from '../../shared/services/meta'
+import { MetaService, MetaDefinition }                                          from '../../shared'
 
 
 @Component({

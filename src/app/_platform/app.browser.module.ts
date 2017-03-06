@@ -6,6 +6,9 @@ import { BrowserModule }                   from '@angular/platform-browser'
 import { ApolloModule }                    from 'apollo-angular'
 import { provideBrowserClient }            from './'
 
+import { StoreModule }                     from '@ngrx/store'
+import { AllReducers }                     from '../shared'
+
 import { CookieService }                   from 'angular2-cookie/services/cookies.service'
 
 import { BrowserTransferStateModule }      from '../../modules/transfer-state';
@@ -44,6 +47,7 @@ export class RavenErrorHandler implements ErrorHandler {
     BrowserModule.withServerTransition({ appId: 'root-app' }),
     BrowserTransferStateModule,
     ApolloModule.withClient(provideBrowserClient),
+    StoreModule.provideStore(AllReducers),
     CommonAppModule,
 	],
   providers: [

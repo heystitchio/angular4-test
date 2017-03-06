@@ -2,7 +2,7 @@
   <h1 class="sr-only">Log In</h1>
   <div class="row">
     <article class="col-sm-12 col-md-6 col-lg-5">
-      <loading *ngIf="loading" [message]="'Logging you in...'"></loading>
+      <loading *ngIf="loading"></loading>
       <section *ngIf="!loading" class="form-contain">
         <div class="logo-contain">
           <a class="logo" routerLink="/discover">

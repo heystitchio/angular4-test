@@ -4,7 +4,7 @@ import { Component, ChangeDetectionStrategy, Inject, OnDestroy, OnInit, ViewEnca
 import { Router }                                                                           from '@angular/router'
 import { FormGroup, FormControl, Validators, FormBuilder }                                  from '@angular/forms'
 
-import { MetaService, MetaDefinition }                                                      from '../../../shared/services/meta'
+import { MetaService, MetaDefinition }                                                      from '../../../shared'
 import { AuthModelService }                                                                 from '../../'
 
 

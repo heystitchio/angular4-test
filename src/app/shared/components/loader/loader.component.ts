@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input, ViewEncapsulation } from '@angular/core'
+import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core'
 
 import { AuthModelService, AuthUser }                            from '../../../auth'
 
@@ -10,8 +10,4 @@ import { AuthModelService, AuthUser }                            from '../../../
   templateUrl: './loader.component.html',
   styleUrls: ['./loader.component.css']
 })
-export class LoaderComponent {
-
-  @Input() message: String;
-
-}
+export class LoaderComponent { }

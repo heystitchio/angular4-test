@@ -1,8 +1,8 @@
-import { Component, OnInit, Inject, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core'
+import { Component, OnInit, Inject,ChangeDetectionStrategy,
+         ViewEncapsulation }                                from '@angular/core'
 
-import { MetaService, MetaDefinition }                                           from '../shared/services/meta'
-import { ApiService }                                                            from '../shared/services/api';
-import gql                                                                       from 'graphql-tag';
+import { MetaService, MetaDefinition, ApiService }          from '../../shared'
+import gql                                                  from 'graphql-tag';
 
 import * as $ from 'jquery';
 declare var Swiper:any;

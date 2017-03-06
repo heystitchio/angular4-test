@@ -6,6 +6,9 @@ import { ServerModule }                             from '@angular/platform-serv
 import { ApolloModule }                             from 'apollo-angular'
 import { provideServerClient }                      from './'
 
+import { StoreModule }                     from '@ngrx/store'
+import { AllReducers }                     from '../shared'
+
 import { TransferState, ServerTransferStateModule } from '../../modules/transfer-state'
 import { CommonAppModule }                          from './'
 import { AppComponent }                             from '../'
@@ -17,14 +20,6 @@ export function getServerLRU(): any {
   return new Map();
 }
 
-export function getRequest(): any {
-  return Zone.current.get('req') || {};
-}
-
-export function getResponse(): any {
-  return Zone.current.get('res') || {};
-}
-
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -32,11 +27,10 @@ export function getResponse(): any {
     ServerModule,
     ServerTransferStateModule,
     ApolloModule.withClient(provideServerClient),
+    StoreModule.provideStore(AllReducers),
     CommonAppModule,
   ],
   providers: [
-    { provide: 'req', useFactory: getRequest },
-    { provide: 'res', useFactory: getResponse },
     { provide: 'LRU', useFactory: getServerLRU, deps: [] },
     { provide: 'isBrowser', useValue: false },
     { provide: 'isServer', useValue: true },
