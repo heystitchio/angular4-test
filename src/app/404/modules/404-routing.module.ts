@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { NgModule }          from '@angular/core'
+import { RouterModule }      from '@angular/router'
 
-import { NotFoundComponent } from './404.component';
+import { NotFoundComponent } from '../'
+
 
 @NgModule({
   imports: [

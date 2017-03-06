@@ -1,4 +1,4 @@
-import { Component, Inject, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.Default,
@@ -7,8 +7,5 @@ import { Component, Inject, ChangeDetectionStrategy, ViewEncapsulation } from '@
   template: 'Contact component'
 })
 export class ContactComponent {
-  constructor(@Inject('req') req: any) {
-    console.log('req', req)
-
-  }
+  constructor() {}
 }

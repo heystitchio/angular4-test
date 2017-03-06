@@ -1,11 +1,9 @@
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { NgModule }                                             from '@angular/core'
+import { RouterModule }                                         from '@angular/router' 
 
-import { AboutComponent } from './about.component';
-import { HowItWorksComponent } from './how-it-works/how-it-works.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { WhoWeAreComponent } from './who-we-are/who-we-are.component';
-import { PressComponent } from './press/press.component';
+import { AboutComponent, HowItWorksComponent, WelcomeComponent,
+         WhoWeAreComponent, PressComponent }                    from '../'
+
 
 @NgModule({
   imports: [

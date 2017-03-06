@@ -7,11 +7,11 @@ import { RouterModule }                from '@angular/router';
 
 import { StoreModule }                 from '@ngrx/store';
 
-import { authReducer, AuthModule }     from './auth';
+import { AuthModule, authReducer }      from './auth';
 import { CreateModule }                 from './create/create.module';
 import { DiscoverModule }               from './discover/discover.module';
-import { AboutModule }                  from './+about/about.module';
-import { ContactModule }                from './+contact/contact.module';
+import { AboutModule }                  from './+about';
+import { ContactModule }                from './+contact';
 import { ExploreModule }                from './+explore/explore.module';
 import { HelpModule }                   from './+help/help.module';
 import { HighlightsModule }             from './+highlights/highlights.module';
@@ -23,13 +23,11 @@ import { TeamModule }                   from './+team/team.module';
 import { TermsModule }                  from './+terms/terms.module';
 import { TrendingModule }               from './+trending/trending.module';
 import { UserModule }                   from './+user/user.module';
-import { NotFoundRoutingModule }        from './+404/404-routing.module';
+import { NotFoundRoutingModule, NotFoundComponent } from './404';
 
 import { SharedModule }                 from './shared';
 
-import { AppRoutingModule }             from './app-routing.module';
-import { AppComponent }                 from './app.component';
-import { NotFoundComponent }            from './+404/404.component';
+import { AppRoutingModule, AppComponent } from './';
 
 
 @NgModule({

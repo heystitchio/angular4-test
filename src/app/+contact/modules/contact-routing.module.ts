@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { NgModule }             from '@angular/core'
+import { RouterModule }         from '@angular/router'
 
-import { ContactComponent } from './contact.component';
-import { NewslettersComponent } from './newsletters/newsletters.component';
+import { ContactComponent }     from '../'
+import { NewslettersComponent } from '../'
 
 @NgModule({
   imports: [
