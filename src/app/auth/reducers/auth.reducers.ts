@@ -1,8 +1,6 @@
-import { ActionReducer,
-        Action }        from '@ngrx/store';
+import { ActionReducer, Action } from '@ngrx/store'
 
-import { Auth }         from '../models'
-import { AuthActions }  from '../actions/';
+import { Auth, AuthActions }     from '../'
 
 var initialState: Auth = {
   error: null,

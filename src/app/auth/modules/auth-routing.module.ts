@@ -1,8 +1,7 @@
-import { NgModule }        from '@angular/core';
-import { RouterModule }    from '@angular/router';
+import { NgModule }                        from '@angular/core'
+import { RouterModule }                    from '@angular/router'
 
-import { LoginComponent,
-         SignupComponent } from '../components';
+import { LoginComponent, SignupComponent } from '../'
 
 @NgModule({
   imports: [

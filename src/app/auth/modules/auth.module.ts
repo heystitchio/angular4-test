@@ -1,12 +1,8 @@
-import { NgModule }                              from '@angular/core'
-import { ReactiveFormsModule }                   from '@angular/forms'
+import { NgModule }                                                             from '@angular/core'
+import { ReactiveFormsModule }                                                  from '@angular/forms'
 
-import { SharedModule }                          from '../../shared/shared.module'
-import { LoginComponent,
-         SignupComponent }                       from './../components'
-import { AuthModelService }                      from '../models'
-import { BrowserAuthService, ServerAuthService } from '../services'
-import { AuthRoutingModule }                     from './'
+import { SharedModule }                                                         from '../../shared'
+import { LoginComponent, SignupComponent, AuthModelService, AuthRoutingModule } from '../'
 
 @NgModule({
   imports: [
@@ -19,9 +15,7 @@ import { AuthRoutingModule }                     from './'
     SignupComponent
   ],
   providers: [
-    AuthModelService,
-    BrowserAuthService,
-    ServerAuthService
+    AuthModelService
   ]
 })
 export class AuthModule { }

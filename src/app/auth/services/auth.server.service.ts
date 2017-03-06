@@ -1,13 +1,13 @@
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/mergeMap'
 
-import { Inject, Injectable }                      from '@angular/core';
-import { Http, Headers, RequestOptions, Response } from '@angular/http';
-import { Observable }                              from 'rxjs/Observable';
-import gql                                         from 'graphql-tag';
+import { Inject, Injectable }                      from '@angular/core'
+import { Http, Headers, RequestOptions, Response } from '@angular/http'
+import { Observable }                              from 'rxjs/Observable'
+import gql                                         from 'graphql-tag'
 
-import { AuthServiceInterface }                    from './';
-import { ApiService }                              from '../../shared/services/api';
+import { ApiService }                              from '../../shared/services/api'
+import { AuthServiceInterface }                    from '../'
 
 const authUserQuery = gql`
   query User($idToken: String!) {

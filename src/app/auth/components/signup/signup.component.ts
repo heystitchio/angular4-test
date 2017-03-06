@@ -1,19 +1,11 @@
-import { Component,
-         ChangeDetectionStrategy,
-         Inject,
-         OnDestroy,
-         OnInit,
-         ViewEncapsulation }      from '@angular/core';
-import { Router }                 from '@angular/router'; 
-import { FormGroup, 
-         FormControl,
-         Validators,
-         FormBuilder }            from '@angular/forms'
-import { Subscription }           from 'rxjs/Subscription';
+import { Subscription }                                                                     from 'rxjs/Subscription'
 
-import { MetaService,
-         MetaDefinition }         from '../../../shared/services/meta';
-import { AuthModelService }       from '../../models';
+import { Component, ChangeDetectionStrategy, Inject, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core'
+import { Router }                                                                           from '@angular/router'
+import { FormGroup, FormControl, Validators, FormBuilder }                                  from '@angular/forms'
+
+import { MetaService, MetaDefinition }                                                      from '../../../shared/services/meta'
+import { AuthModelService }                                                                 from '../../'
 
 
 @Component({
