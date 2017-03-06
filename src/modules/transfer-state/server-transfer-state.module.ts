@@ -1,9 +1,9 @@
-import { NgModule }      from '@angular/core';
-import { TransferState } from './';
+import { NgModule }                           from '@angular/core'
+import { TransferState, ServerTransferState } from './'
 
 @NgModule({
   providers: [
-    TransferState
+    { provide: TransferState, useClass: ServerTransferState }
   ]
 })
-export class ServerTransferStateModule { }
+export class ServerTransferStateModule {}

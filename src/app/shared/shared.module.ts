@@ -29,6 +29,7 @@ const COMPONENTS = [
 const PROVIDERS = [
   CacheService,
   HashService,
+  MetaService,
   ApiService,
   CookieService
 ]

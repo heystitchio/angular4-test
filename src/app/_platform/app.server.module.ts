@@ -1,14 +1,15 @@
 import '../shared/lib/rxjs-operators'
 
-import { NgModule  }                      from '@angular/core'
-import { ServerModule }                   from '@angular/platform-server'
+import { NgModule  }                                from '@angular/core'
+import { ServerModule }                             from '@angular/platform-server'
 
-import { ApolloModule }                   from 'apollo-angular'
-import { provideServerClient }            from './'
+import { ApolloModule }                             from 'apollo-angular'
+import { provideServerClient }                      from './'
 
-import { BrowserAppModule }               from './'
-import { AppComponent }                   from '../'
-import { AuthService, ServerAuthService } from '../auth/services'
+import { TransferState, ServerTransferStateModule } from '../../modules/transfer-state'
+import { CommonAppModule }                          from './'
+import { AppComponent }                             from '../'
+import { AuthService, ServerAuthService }           from '../auth/services'
 
 declare var Zone: any
 
@@ -28,9 +29,10 @@ export function getResponse(): any {
 @NgModule({
   bootstrap: [AppComponent],
   imports: [
-    BrowserAppModule,
+    ServerModule,
+    ServerTransferStateModule,
     ApolloModule.withClient(provideServerClient),
-    ServerModule
+    CommonAppModule,
   ],
   providers: [
     { provide: 'req', useFactory: getRequest },
@@ -39,4 +41,14 @@ export function getResponse(): any {
     { provide: AuthService, useClass: ServerAuthService },
   ]
 })
-export class ServerAppModule {}
+export class ServerAppModule {
+
+  constructor(
+    private _transferState: TransferState
+  ) { }
+
+  ngOnBootstrap = () => {
+    this._transferState.inject();
+  }
+
+}

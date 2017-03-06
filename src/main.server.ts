@@ -25,7 +25,7 @@ const app = express();
 
 app.engine('html', ngExpressEngine({
   aot: true,
-  bootstrap: [ServerAppModuleNgFactory]
+  bootstrap: ServerAppModuleNgFactory
 }));
 
 app.set('port', process.env.PORT || 4200);

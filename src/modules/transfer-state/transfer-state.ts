@@ -1,8 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
 
 @Injectable()
 export class TransferState {
+
   private _map = new Map<string, any>();
+
+  constructor() {}
 
   keys() {
     return this._map.keys();
@@ -31,4 +34,6 @@ export class TransferState {
         this.set(key, obj[key]);
       });
   }
+
+  inject(): void {}
 }
