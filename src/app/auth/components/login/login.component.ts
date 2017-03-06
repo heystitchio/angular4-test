@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   public loginForm: FormGroup;
   public error: string;
+  public loading: Boolean = false;
 
   private tokenSubscription: Subscription;
   private errorSubscription: Subscription;
@@ -48,6 +49,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
 
     this.tokenSubscription = this._auth.token$.subscribe(token => {
+      this.loading = false;
       if (token) { this._router.navigate(['/discover']); }
     });
 
@@ -55,7 +57,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this._meta.setTitle('Log In');
+    this._meta.setTitle('Log in');
     this._meta.addTags(this.meta);
   }
 
@@ -67,6 +69,8 @@ export class LoginComponent implements OnInit, OnDestroy {
   login(): void {
     var username: String = this.loginForm.controls['email'].value,
         password: String = this.loginForm.controls['password'].value;
+    
+    this.loading = true;
 
     this._auth.login(username, password);
   }

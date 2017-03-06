@@ -1,12 +1,10 @@
-import { Component,
-         ChangeDetectionStrategy,
-         OnDestroy,
-         ViewEncapsulation }      from '@angular/core';
-import { Router }                 from '@angular/router';
-import { Subscription }           from 'rxjs/Subscription';
+import { Subscription }                                                     from 'rxjs/Subscription'
 
-import { AuthModelService,
-         AuthUser }               from '../../../auth';
+import { Component, ChangeDetectionStrategy, OnDestroy, ViewEncapsulation } from '@angular/core'
+import { Router }                                                           from '@angular/router'
+
+import { AuthModelService,  AuthUser }                                      from '../../../auth'
+
 
 @Component({
   changeDetection: ChangeDetectionStrategy.Default,

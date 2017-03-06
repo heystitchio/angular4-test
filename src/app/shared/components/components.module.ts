@@ -1,10 +1,9 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { NgModule, ModuleWithProviders }                          from '@angular/core'
+import { CommonModule }                                           from '@angular/common'
+import { RouterModule }                                           from '@angular/router'
+import { ReactiveFormsModule }                                    from '@angular/forms'
 
-import { MainNavComponent } from './nav/nav.component';
-import { MainFooterComponent } from './footer/footer.component';
+import { MainNavComponent, MainFooterComponent, LoaderComponent } from './'
 
 const MODULES = [
   CommonModule,
@@ -18,7 +17,8 @@ const PIPES = [
 
 const COMPONENTS = [
   MainNavComponent,
-  MainFooterComponent
+  MainFooterComponent,
+  LoaderComponent
 ];
 
 const PROVIDERS = [

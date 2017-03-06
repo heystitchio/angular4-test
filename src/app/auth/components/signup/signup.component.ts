@@ -58,7 +58,7 @@ export class SignupComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this._meta.setTitle('Sign Up');
+    this._meta.setTitle('Sign up');
     this._meta.addTags(this.meta);
   }
 
