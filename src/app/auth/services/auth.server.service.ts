@@ -6,7 +6,7 @@ import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { Observable }                              from 'rxjs/Observable';
 import gql                                         from 'graphql-tag';
 
-import { AuthService }                             from './';
+import { AuthServiceInterface }                    from './';
 import { ApiService }                              from '../../shared/services/api';
 
 const authUserQuery = gql`
@@ -31,7 +31,7 @@ const authUserQuery = gql`
 `
 
 @Injectable()
-export class ServerAuthService implements AuthService {
+export class ServerAuthService implements AuthServiceInterface {
 
   private baseUrl = 'https://heystitchio.auth0.com';
   private headers = new Headers({ 'Content-Type': 'application/json' });

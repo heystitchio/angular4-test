@@ -7,7 +7,7 @@ import { Observable }                              from 'rxjs/Observable';
 import { CookieService }                           from 'angular2-cookie/services/cookies.service';
 import gql                                         from 'graphql-tag';
 
-import { AuthService }                             from './';
+import { AuthServiceInterface }                    from './';
 import { ApiService }                              from '../../shared/services/api';
 
 const createUserMutation = gql`
@@ -45,7 +45,7 @@ const authUserQuery = gql`
 
 
 @Injectable()
-export class BrowserAuthService implements AuthService {
+export class BrowserAuthService implements AuthServiceInterface {
 
   private baseUrl = 'https://heystitchio.auth0.com';
   private headers = new Headers({ 'Content-Type': 'application/json' });
