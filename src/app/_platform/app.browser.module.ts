@@ -48,6 +48,8 @@ export class RavenErrorHandler implements ErrorHandler {
 	],
   providers: [
     { provide: 'LRU', useFactory: getBrowserLRU, deps: [] },
+    { provide: 'isBrowser', useValue: true },
+    { provide: 'isServer', useValue: false },
     { provide: AuthService, useClass: BrowserAuthService },
     { provide: ErrorHandler, useClass: RavenErrorHandler },
     { provide: CookieService, useFactory: cookieServiceFactory }

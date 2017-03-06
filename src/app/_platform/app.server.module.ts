@@ -38,6 +38,8 @@ export function getResponse(): any {
     { provide: 'req', useFactory: getRequest },
     { provide: 'res', useFactory: getResponse },
     { provide: 'LRU', useFactory: getServerLRU, deps: [] },
+    { provide: 'isBrowser', useValue: false },
+    { provide: 'isServer', useValue: true },
     { provide: AuthService, useClass: ServerAuthService },
   ]
 })
