@@ -56,12 +56,14 @@ export class ServerAuthService implements AuthServiceInterface {
   }
 
   public initAuth(): Observable<Object> {
-    var token = this._req.cookies['USID'];
+    var token = this._req.cookies['USID'] || null;
 
-    if (token != null) {
+    if (token !== null) {
       return this.getUserInfo(token)
         .flatMap(data => this.getUserFromDatabase(data['token'], data['user']['user_id']))
         .catch((error: any) => Observable.throw(`browser.auth.service.ts[initAuth()] => ${error}` || 'browser.auth.service.ts[initAuth()] => An unknown error occurred.'));
+    } else {
+      return Observable.of({ token: null });
     }
   }
 

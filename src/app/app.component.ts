@@ -8,7 +8,7 @@ import { TransferState }                                                        
 @Component({
   changeDetection: ChangeDetectionStrategy.Default,
   encapsulation: ViewEncapsulation.Emulated,
-  selector: 'app',
+  selector: 'root',
   styleUrls: ['./app.component.css'],
   templateUrl: './app.component.html'
 })

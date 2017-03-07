@@ -13,33 +13,44 @@
         </a>
       </div>
       <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right" style="border-left: 1px solid #eee;padding-left: 25px;" *ngIf="!isAuthenticated()">
+        <ul class="nav navbar-nav navbar-right navbar-action-user-anon" *ngIf="!isAuthenticated()">
           <li><button type="button" class="btn btn-primary navbar-btn" routerLink="signup">Sign up</button></li>
           <li><button type="button" class="btn navbar-btn" routerLink="login">Log in</button></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right" style="border-left: 1px solid #eee;padding-left: 25px;" *ngIf="isAuthenticated()">
-          <li>{{ authUser?.id }}</li>
-          <li><button type="button" class="btn navbar-btn" (click)="logout()">Sign out</button></li>
+        <ul class="nav navbar-nav navbar-right navbar-action-user-auth"  *ngIf="isAuthenticated()">
+          <li class="dropdown">
+            <a class="dropdown-toggle user-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <img class="user-avatar" [src]="authUser?.avatarUrl" [alt]="authUser?.username">
+              <span class="sr-only">User menu</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a (click)="logout()">Sign out</a></li>
+            </ul>
+          </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right" style="border-left: 1px solid #eee;padding: 0 7px;" *ngIf="isAuthenticated()">
+        <ul class="nav navbar-nav navbar-right navbar-action-icon" *ngIf="isAuthenticated()">
           <li><button type="button" class="btn navbar-btn navbar-btn-icon navbar-btn-icon-bell active">
             <i class="icon-bell" style="font-size: 18px;"></i>
             <span class="sr-only">Notifications</span>
           </button></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right" style="border-left: 1px solid #eee;padding: 0 7px;" *ngIf="isAuthenticated()">
+        <ul class="nav navbar-nav navbar-right navbar-action-icon" *ngIf="isAuthenticated()">
           <li><button type="button" class="btn navbar-btn navbar-btn-icon navbar-btn-icon-message active">
             <i class="icon-message" style="font-size: 18px;"></i>
             <span class="sr-only">Messages</span>
           </button></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right" style="border-left: 1px solid #eee;padding: 0 7px;">
+        <ul class="nav navbar-nav navbar-right navbar-action-icon">
           <li><button type="button" class="btn navbar-btn navbar-btn-icon">
             <i class="icon-search" style="font-size: 18px;" routerLink="search"></i>
             <span class="sr-only">Search...</span>
           </button></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right" style="padding-right: 10px;">
+        <ul class="nav navbar-nav navbar-right navbar-links">
           <li><a routerLinkActive="router-link-active" routerLink="discover">Discover</a></li>
           <li><a routerLinkActive="router-link-active" routerLink="create">Start a project</a></li>
           <li><a routerLinkActive="router-link-active" routerLink="about">About</a></li>

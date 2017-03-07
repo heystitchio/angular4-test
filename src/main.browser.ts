@@ -9,7 +9,12 @@ import { platformBrowser }              from '@angular/platform-browser'
 
 import { BrowserAppModuleNgFactory }    from './app/_platform/app.browser.module.ngfactory'
 
+declare var preboot: any;
+
 enableProdMode();
 
 platformBrowser()
-  .bootstrapModuleFactory(BrowserAppModuleNgFactory);
+  .bootstrapModuleFactory(BrowserAppModuleNgFactory)
+  .then(() => {
+    preboot.complete();
+  });
