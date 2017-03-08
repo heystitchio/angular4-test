@@ -11,4 +11,4 @@ import { HighlightsRoutingModule } from './highlights-routing.module';
     HighlightsComponent
   ]
 })
-export class HighlightsModule { }
+export class HighlightsModule {}

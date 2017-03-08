@@ -11,4 +11,4 @@ import { CreateRoutingModule } from './create-routing.module';
     CreateComponent
   ]
 })
-export class CreateModule { }
+export class CreateModule {}

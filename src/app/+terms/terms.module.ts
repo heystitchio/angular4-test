@@ -17,4 +17,4 @@ import { TermsRoutingModule } from './terms-routing.module';
     CookiesComponent
   ]
 })
-export class TermsModule { }
+export class TermsModule {}

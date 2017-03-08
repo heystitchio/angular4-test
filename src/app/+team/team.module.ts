@@ -13,4 +13,4 @@ import { TeamRoutingModule } from './team-routing.module';
     TeamDashboardComponent
   ]
 })
-export class TeamModule { }
+export class TeamModule {}

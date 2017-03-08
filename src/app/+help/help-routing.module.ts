@@ -14,4 +14,4 @@ import { SupportComponent } from './support/support.component';
     ])
   ]
 })
-export class HelpRoutingModule { }
+export class HelpRoutingModule {}

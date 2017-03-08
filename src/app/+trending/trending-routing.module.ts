@@ -14,4 +14,4 @@ import { TrendingTeamsComponent } from './teams/trending-teams.component';
     ])
   ]
 })
-export class TrendingRoutingModule { }
+export class TrendingRoutingModule {}

@@ -11,4 +11,4 @@ import { LoginComponent, SignupComponent } from '../'
     ])
   ]
 })
-export class AuthRoutingModule { }
+export class AuthRoutingModule {}

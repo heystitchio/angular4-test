@@ -56,7 +56,7 @@ export class ServerAuthService implements AuthServiceInterface {
   }
 
   public initAuth(): Observable<Object> {
-    var token = this._req.cookies['USID'] || null;
+    var token: String = this._req.cookies.USID || null;
 
     if (token !== null) {
       return this._getUserInfo(token)

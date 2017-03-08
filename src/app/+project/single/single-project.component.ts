@@ -7,8 +7,5 @@ import { Component, Inject, ChangeDetectionStrategy, ViewEncapsulation } from '@
   template: 'Single Project component'
 })
 export class SingleProjectComponent {
-  constructor(@Inject('req') req: any) {
-    console.log('req', req)
-
-  }
+  constructor() {}
 }

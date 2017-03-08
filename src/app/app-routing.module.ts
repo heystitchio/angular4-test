@@ -8,4 +8,4 @@ import { RouterModule } from '@angular/router';
     ])
   ],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

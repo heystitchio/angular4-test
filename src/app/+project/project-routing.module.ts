@@ -16,4 +16,4 @@ import { SingleApplicationComponent } from './single/application/single/single-a
     ])
   ]
 })
-export class ProjectRoutingModule { }
+export class ProjectRoutingModule {}

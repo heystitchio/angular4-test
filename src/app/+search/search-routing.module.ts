@@ -10,4 +10,4 @@ import { SearchComponent } from './search.component';
     ])
   ]
 })
-export class SearchRoutingModule { }
+export class SearchRoutingModule {}

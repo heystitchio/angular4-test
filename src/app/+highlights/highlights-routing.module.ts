@@ -10,4 +10,4 @@ import { HighlightsComponent } from './highlights.component';
     ])
   ]
 })
-export class HighlightsRoutingModule { }
+export class HighlightsRoutingModule {}

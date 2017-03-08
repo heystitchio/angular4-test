@@ -11,4 +11,4 @@ import { UserRoutingModule } from './user-routing.module';
     SingleUserComponent
   ]
 })
-export class UserModule { }
+export class UserModule {}

@@ -30,7 +30,7 @@ export class DiscoverComponent implements OnInit, AfterViewInit {
     @Inject('isBrowser') private _isBrowser: Boolean,
     private _meta: MetaService,
     private _api: ApiService
-  ) { }
+  ) {}
 
   universalInit(): void {
     /*this._api.query({}).subscribe(res => {

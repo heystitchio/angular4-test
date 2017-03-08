@@ -105,9 +105,6 @@ function ngApp(req, res) {
 
 }
 
-/**
- * use universal for specific routes
- */
 app.get('/', ngApp);
 ROUTES.forEach(route => {
   app.get(`/${route}`, ngApp);
@@ -121,7 +118,6 @@ app.get('*', function(req, res) {
   res.status(404).send(json);
 });
 
-// Server
 let server = app.listen(app.get('port'), () => {
   console.log(`Listening at: http://localhost:${server.address().port}`);
 });

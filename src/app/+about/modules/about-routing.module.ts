@@ -16,4 +16,4 @@ import { AboutComponent, HowItWorksComponent, WelcomeComponent,
     ])
   ]
 })
-export class AboutRoutingModule { }
+export class AboutRoutingModule {}

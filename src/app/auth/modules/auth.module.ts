@@ -19,4 +19,4 @@ import { LoginComponent, SignupComponent, AuthModelService, AuthRoutingModule } 
     AuthModelService
   ]
 })
-export class AuthModule { }
+export class AuthModule {}

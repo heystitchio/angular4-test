@@ -11,4 +11,4 @@ import { JobsRoutingModule } from './jobs-routing.module';
     JobsComponent
   ]
 })
-export class JobsModule { }
+export class JobsModule {}

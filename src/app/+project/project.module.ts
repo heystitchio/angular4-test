@@ -17,4 +17,4 @@ import { ProjectRoutingModule } from './project-routing.module';
     SingleApplicationComponent
   ]
 })
-export class ProjectModule { }
+export class ProjectModule {}

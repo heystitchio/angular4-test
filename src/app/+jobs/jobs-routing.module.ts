@@ -10,4 +10,4 @@ import { JobsComponent } from './jobs.component';
     ])
   ]
 })
-export class JobsRoutingModule { }
+export class JobsRoutingModule {}

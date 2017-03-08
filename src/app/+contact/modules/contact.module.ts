@@ -13,4 +13,4 @@ import { ContactRoutingModule } from '../'
     NewslettersComponent
   ]
 })
-export class ContactModule { }
+export class ContactModule {}

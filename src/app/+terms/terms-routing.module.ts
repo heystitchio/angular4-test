@@ -16,4 +16,4 @@ import { CookiesComponent } from './cookies/cookies.component';
     ])
   ]
 })
-export class TermsRoutingModule { }
+export class TermsRoutingModule {}

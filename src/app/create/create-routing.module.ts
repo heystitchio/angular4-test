@@ -12,4 +12,4 @@ import { CanActivateWithAuthGuard } from '../shared'
     ])
   ]
 })
-export class CreateRoutingModule { }
+export class CreateRoutingModule {}

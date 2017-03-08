@@ -15,4 +15,4 @@ import { HelpRoutingModule } from './help-routing.module';
     SupportComponent
   ]
 })
-export class HelpModule { }
+export class HelpModule {}

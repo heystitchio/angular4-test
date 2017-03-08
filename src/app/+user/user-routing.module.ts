@@ -10,4 +10,4 @@ import { SingleUserComponent } from './single/single-user.component';
     ])
   ]
 })
-export class UserRoutingModule { }
+export class UserRoutingModule {}

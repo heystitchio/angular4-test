@@ -12,4 +12,4 @@ import { NewslettersComponent } from '../'
     ])
   ]
 })
-export class ContactRoutingModule { }
+export class ContactRoutingModule {}

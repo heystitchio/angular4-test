@@ -16,4 +16,4 @@ import { CategoriesComponent } from './categories/categories.component';
     ])
   ]
 })
-export class ExploreRoutingModule { }
+export class ExploreRoutingModule {}

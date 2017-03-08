@@ -18,4 +18,4 @@ import { AboutComponent, HowItWorksComponent, WelcomeComponent,
     PressComponent
   ]
 })
-export class AboutModule { }
+export class AboutModule {}

@@ -41,7 +41,7 @@ export class ServerAppModule {
 
   constructor(
     private _transferState: TransferState
-  ) { }
+  ) {}
 
   ngOnBootstrap = () => {
     this._transferState.inject();

@@ -11,4 +11,4 @@ import { DiscoverComponent } from '../'
     ])
   ]
 })
-export class DiscoverRoutingModule { }
+export class DiscoverRoutingModule {}

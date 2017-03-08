@@ -21,7 +21,6 @@ import { TeamModule }                   from './+team/team.module'
 import { TermsModule }                  from './+terms/terms.module'
 import { TrendingModule }               from './+trending/trending.module'
 import { UserModule }                   from './+user/user.module'
-import { NotFoundRoutingModule, NotFoundComponent } from './404'
 
 import { SharedModule }                 from './shared'
 
@@ -30,8 +29,7 @@ import { AppRoutingModule, AppComponent } from './'
 
 @NgModule({
   declarations: [ 
-    AppComponent,
-    NotFoundComponent
+    AppComponent
   ],
   imports: [
     SharedModule,
@@ -51,8 +49,7 @@ import { AppRoutingModule, AppComponent } from './'
     TermsModule,
     TrendingModule,
     UserModule,
-    AppRoutingModule,
-    NotFoundRoutingModule
+    AppRoutingModule
   ],
 	providers: [
     { provide: APP_BASE_HREF, useValue: '/'}

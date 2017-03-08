@@ -12,4 +12,4 @@ import { TeamDashboardComponent } from './single/dashboard/team-dashboard.compon
     ])
   ]
 })
-export class TeamRoutingModule { }
+export class TeamRoutingModule {}

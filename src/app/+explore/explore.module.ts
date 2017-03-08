@@ -17,4 +17,4 @@ import { ExploreRoutingModule } from './explore-routing.module';
     CategoriesComponent
   ]
 })
-export class ExploreModule { }
+export class ExploreModule {}
