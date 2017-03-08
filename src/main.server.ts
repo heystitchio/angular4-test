@@ -19,9 +19,12 @@ import { ServerAppModuleNgFactory }            from './app/_platform/app.server.
 import { ngExpressEngine }                     from './modules/ng-express-engine/express-engine'
 import { ROUTES }                              from './routes'
 
+declare var Zone: any;
+
 enableProdMode();
 
 const app = express();
+const ROOT = path.join(path.resolve(__dirname, '..'));
 
 app.engine('html', ngExpressEngine({
   aot: true,
@@ -77,14 +80,21 @@ function cacheControl(req, res, next) {
   next();
 }
 
+app.use(cacheControl, express.static(path.join(ROOT, 'dist/client'), { index: false }));
+
 process.on('uncaughtException', function (err) { 
   console.error('Catching uncaught errors to avoid process crash', err);
 });
 
-app.use('/', cacheControl, express.static('dist/client', {index: false}));
+function ngApp(req, res) {
 
-ROUTES.forEach(route => {
-  app.get(route, (req, res) => {
+  function onHandleError(parentZoneDelegate, currentZone, targetZone, error)  {
+    console.warn('Error in SSR, serving for direct CSR');
+    res.sendFile('index.html', { root: './src' });
+    return false;
+  }
+
+  Zone.current.fork({ name: 'CSR fallback', onHandleError }).run(() => {
     console.time(`GET: ${req.originalUrl}`);
     res.render('index', {
       req: req,
@@ -92,8 +102,26 @@ ROUTES.forEach(route => {
     });
     console.timeEnd(`GET: ${req.originalUrl}`);
   });
+
+}
+
+/**
+ * use universal for specific routes
+ */
+app.get('/', ngApp);
+ROUTES.forEach(route => {
+  app.get(`/${route}`, ngApp);
+  app.get(`/${route}/*`, ngApp);
 });
 
+app.get('*', function(req, res) {
+  res.setHeader('Content-Type', 'application/json');
+  var pojo = { status: 404, message: 'No Content' };
+  var json = JSON.stringify(pojo, null, 2);
+  res.status(404).send(json);
+});
+
+// Server
 let server = app.listen(app.get('port'), () => {
-  console.log(`Server listening at: http://localhost:${server.address().port}`);
+  console.log(`Listening at: http://localhost:${server.address().port}`);
 });

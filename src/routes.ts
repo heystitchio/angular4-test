@@ -1,76 +1,74 @@
 export const ROUTES: string[] = [
-  // Root
-  '/',
-
+ 
   // About
-  '/about',
-  '/about/welcome',
-  '/about/how-it-works',
-  '/about/who-we-are',
-  '/about/press',
+  'about',
+  'about/welcome',
+  'about/how-it-works',
+  'about/who-we-are',
+  'about/press',
 
   // Auth
-  '/login',
-  '/signup',
-  '/settings',
+  'login',
+  'signup',
+  'settings',
 
   // Contact
-  '/contact',
-  '/newsletters',
+  'contact',
+  'newsletters',
 
   // Create
-  '/create',
+  'create',
 
   // Discover
-  '/discover',
+  'discover',
 
   // Explore
-  '/explore',
-  '/explore/featured',
-  '/explore/popular',
-  '/explore/categories',
+  'explore',
+  'explore/featured',
+  'explore/popular',
+  'explore/categories',
 
   // Help
-  '/help',
-  '/help/faq',
-  '/help/support',
+  'help',
+  'help/faq',
+  'help/support',
 
   // Highlights
-  '/highlights',
+  'highlights',
 
   // Jobs
-  '/jobs',
+  'jobs',
 
   // Projects
-  '/p/:slug',
-  '/p/:slug/dashboard',
-  '/project/:id',
-  '/project/:id/dashboard',
+  'p/:slug',
+  'p/:slug/dashboard',
+  'project/:id',
+  'project/:id/dashboard',
 
   // Search
-  '/search',
+  'search',
 
   // Terms
-  '/terms',
-  '/terms/use',
-  '/terms/privacy',
-  '/terms/cookies',
+  'terms',
+  'terms/use',
+  'terms/privacy',
+  'terms/cookies',
 
   // Trending
-  '/trending',
-  '/trending/users',
-  '/trending/teams',
+  'trending',
+  'trending/users',
+  'trending/teams',
 
   // Teams
-  '/t/:slug',
-  '/t/:slug/dashboard',
-  '/team/:id',
-  '/team/:id/dashboard',
+  't/:slug',
+  't/:slug/dashboard',
+  'team/:id',
+  'team/:id/dashboard',
 
   // Users
-  '/u/:slug',
-  '/user/:id',
+  'u/:slug',
+  'user/:id',
 
   // 404
-  '/404'
+  '404'
 ];
