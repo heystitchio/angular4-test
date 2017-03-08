@@ -190,10 +190,10 @@ export class BrowserAuthService implements AuthServiceInterface {
         case 400:
           switch(code) {
             case 'user_exists':
-              errorMessage = 'Do you already have an account? Try logging in instead.';
+              errorMessage = 'An account with that email already exists. Try logging in instead.';
               break;
             case 'username_exists':
-              errorMessage = 'An account with that username already exists. Try logging in instead.';
+              errorMessage = 'An account with that email already exists. Try logging in instead.';
               break;
             case 'email_exists':
               errorMessage = 'An account with that email already exists. Try logging in instead.';

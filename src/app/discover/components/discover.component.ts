@@ -1,11 +1,9 @@
-import { Component, OnInit, Inject,ChangeDetectionStrategy,
-         ViewEncapsulation }                                from '@angular/core'
+import { AfterViewInit, Component, OnInit, Inject, 
+        ChangeDetectionStrategy, ViewEncapsulation, ViewChild }    from '@angular/core'
 
-import { MetaService, MetaDefinition, ApiService }          from '../../shared'
-import gql                                                  from 'graphql-tag';
-
-import * as $ from 'jquery';
-declare var Swiper:any;
+import { MetaService, MetaDefinition, ApiService, SliderComponent,
+         SliderOptions }                                           from '../../shared'
+import gql                                                         from 'graphql-tag';
 
 
 @Component({
@@ -15,32 +13,24 @@ declare var Swiper:any;
   styleUrls: [ './discover.component.css' ],
   templateUrl: './discover.component.html'
 })
-export class DiscoverComponent implements OnInit {
-  slides: any[] = [];
-  explore: any[] = [];
-  recommended: any[] = [];
-  users: any[] = [];
-  meta: MetaDefinition[] = [];
+export class DiscoverComponent implements OnInit, AfterViewInit {
+
+  @ViewChild(SliderComponent) private _slider: SliderComponent;
+
+  public mainSlides: any[] = [];
+  public exploreSlides: any[] = [];
+  public recommended: any[] = [];
+  public users: any[] = [];
+  public mainSliderOptions: SliderOptions = {};
+  public exploreSliderOptions: SliderOptions = {};
+
+  private _metaArray: MetaDefinition[] = [];
 
   constructor(
     @Inject('isBrowser') private _isBrowser: Boolean,
     private _meta: MetaService,
     private _api: ApiService
-  ) {
-    this.universalInit();
-
-    this.meta = [
-      { name: 'description', content: 'Set by meta setter service', id: 'desc' },
-      // Twitter
-      { name: 'twitter:title', content: 'Set by meta setter service' },
-      // Google+
-      { itemprop: 'name', content: 'Set by meta setter service' },
-      { itemprop: 'description', content: 'Set by meta setter service' },
-      // Facebook / Open Graph
-      { property: 'fb:app_id', content: 'Set by meta setter service' },
-      { property: 'og:title', content: 'Set by meta setter service' }
-    ];
-  }
+  ) { }
 
   universalInit(): void {
     /*this._api.query({}).subscribe(res => {
@@ -61,27 +51,40 @@ export class DiscoverComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this._metaArray = [
+      { name: 'description', content: 'Set by meta setter service', id: 'desc' },
+      // Twitter
+      { name: 'twitter:title', content: 'Set by meta setter service' },
+      // Google+
+      { itemprop: 'name', content: 'Set by meta setter service' },
+      { itemprop: 'description', content: 'Set by meta setter service' },
+      // Facebook / Open Graph
+      { property: 'fb:app_id', content: 'Set by meta setter service' },
+      { property: 'og:title', content: 'Set by meta setter service' }
+    ];
     this._meta.setTitle('Discover');
-    this._meta.addTags(this.meta);
+    this._meta.addTags(this._metaArray);
 
-    if (this._isBrowser) {
-      $(document).ready(function () {
-        var exploreSwiper = new Swiper ('.swiper-explore', {
-          direction: 'vertical',
-          loop: true,
-          autoplay: 8000,
-          autoplayDisableOnInteraction: false,
-          pagination: '.swiper-explore-pagination',
-          paginationClickable: true
-        });
-      });
-    }
+    this.mainSliderOptions = {
+      loop: true,
+      autoplay: 8000,
+      autoplayDisableOnInteraction: false,
+      paginationClickable: true
+    };
+
+    this.mainSlides = [
+      "test",
+      "test 2",
+      "test 3"
+    ];
   }
 
-  initSlider(id: string, options: Object): void {
-    $(document).ready(function () {
-      var mainSwiper = new Swiper (`.swiper-${id}`, options);
-    });
+  ngAfterViewInit(): void {
+    setTimeout(() => this._initSlider());
+  }
+
+  private _initSlider(): void {
+    this._slider.initSlider();
   }
 
 }

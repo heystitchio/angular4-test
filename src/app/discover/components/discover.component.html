@@ -3,16 +3,7 @@
   <article>
     <section>
       <h1 class="sr-only">What's new at Stitch?</h1>
-      <div class="swiper-container swiper-main">
-        <ul class="swiper-wrapper">
-          <li class="swiper-slide" *ngFor="let slide of slides">
-            <h3>{{ slide.name }}</h3>
-          </li>
-        </ul>
-        <div class="swiper-pagination swiper-main-pagination"></div>
-        <div class="swiper-button-prev swiper-main-button-prev"></div>
-        <div class="swiper-button-next swiper-main-button-next"></div>
-      </div>
+      <slider [id]="'main'" [slides]="mainSlides" [options]="mainSliderOptions"></slider>
     </section>
   </article>
 </section>

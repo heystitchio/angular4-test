@@ -1,12 +1,14 @@
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { NgModule }                 from '@angular/core'
+import { RouterModule }             from '@angular/router'
 
-import { CreateComponent } from './create.component';
+import { CreateComponent }          from './create.component'
+import { CanActivateWithAuthGuard } from '../shared'
+
 
 @NgModule({
   imports: [
     RouterModule.forChild([
-      { path: 'create', component: CreateComponent }
+      { path: 'create', component: CreateComponent, canActivate: [CanActivateWithAuthGuard]  }
     ])
   ]
 })

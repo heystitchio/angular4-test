@@ -2,23 +2,18 @@
   height: 320px;
 }
 
-.swiper-main,
-.swiper-explore {
+:host >>> #main-swiper,
+:host >>> #explore-swiper {
   position: relative;
 }
 
-.swiper-wrapper {
-  padding: 0;
-  list-style: none;
-}
-
-.swiper-main {
+:host >>> #main-swiper {
   background-color: #ccc;
   height: 650px;
   overflow: hidden;
 }
 
-.swiper-explore {
+:host >>> #explore-swiper {
   height: 340px;
   overflow: hidden;
 }

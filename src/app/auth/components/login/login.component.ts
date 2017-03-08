@@ -1,11 +1,12 @@
-import { Subscription }                                                                       from 'rxjs/Subscription'
+import { Subscription }                                                 from 'rxjs/Subscription'
 
-import { Component,  ChangeDetectionStrategy, Inject, OnDestroy, OnInit,  ViewEncapsulation } from '@angular/core'
-import { Router }                                                                             from '@angular/router'
-import { FormGroup, FormControl, Validators, FormBuilder }                                    from '@angular/forms'
+import { AfterViewInit, Component, ChangeDetectionStrategy, Inject, 
+         OnDestroy, OnInit, ViewEncapsulation, ViewChild }              from '@angular/core'
+import { Router, ActivatedRoute }                                       from '@angular/router'
+import { FormGroup, FormControl, Validators, FormBuilder }              from '@angular/forms'
 
-import { MetaService,  MetaDefinition }                                                       from '../../../shared';
-import { AuthModelService }                                                                   from '../../'
+import { MetaService,  MetaDefinition, SliderComponent, SliderOptions } from '../../../shared';
+import { AuthModelService }                                             from '../../'
 
 
 @Component({
@@ -15,23 +16,36 @@ import { AuthModelService }                                                     
   templateUrl: './login.component.html',
   styleUrls: ['../auth.component.css']
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class LoginComponent implements OnInit, OnDestroy, AfterViewInit {
+
+  @ViewChild(SliderComponent) private _slider: SliderComponent;
 
   public loginForm: FormGroup;
   public error: string;
   public loading: Boolean = false;
+  public slides: any[] = [];
+  public sliderOptions: SliderOptions = {};
 
-  private tokenSubscription: Subscription;
-  private errorSubscription: Subscription;
-  private meta: MetaDefinition[] = [];
+  private _tokenSubscription: Subscription;
+  private _errorSubscription: Subscription;
+  private _metaArray: MetaDefinition[] = [];
+  private _returnUrl: String;
 
   constructor(
     private _auth: AuthModelService,
     private _router: Router,
+    private _route: ActivatedRoute,
     private _meta: MetaService,
     private _fb: FormBuilder
   ) {
-    this.meta = [
+    this.loginForm = _fb.group({
+      "email": ["", Validators.required],
+      "password": ["", Validators.required]
+    });
+  }
+
+  ngOnInit(): void {
+    this._metaArray = [
       { name: 'description', content: 'Set by meta setter service', id: 'desc' },
       // Twitter
       { name: 'twitter:title', content: 'Set by meta setter service' },
@@ -42,28 +56,41 @@ export class LoginComponent implements OnInit, OnDestroy {
       { property: 'fb:app_id', content: 'Set by meta setter service' },
       { property: 'og:title', content: 'Set by meta setter service' }
     ];
-
-    this.loginForm = _fb.group({
-      "email": ["", Validators.required],
-      "password": ["", Validators.required]
-    });
-
-    this.tokenSubscription = this._auth.token$.subscribe(token => {
-      this.loading = false;
-      if (token) { this._router.navigate(['/discover']); }
-    });
-
-    this.errorSubscription = this._auth.error$.subscribe(error => this.error = error);
-  }
-
-  ngOnInit(): void {
     this._meta.setTitle('Log in');
-    this._meta.addTags(this.meta);
+    this._meta.addTags(this._metaArray);
+
+    this.sliderOptions = {
+      loop: true,
+      autoplay: 8000,
+      autoplayDisableOnInteraction: false,
+      paginationClickable: true
+    };
+
+    this._tokenSubscription = this._auth.token$.subscribe(token => {
+      this.loading = false;
+      this._returnUrl = this._route.snapshot.params['return'] || '/discover';
+
+      if (token) { 
+        this._router.navigate([this._returnUrl]);
+      }
+    });
+
+    this._errorSubscription = this._auth.error$.subscribe(error => this.error = error);
+
+    this.slides = [
+      "test",
+      "test 2",
+      "test 3"
+    ];
   }
 
   ngOnDestroy(): void {
-    this.tokenSubscription.unsubscribe();
-    this.errorSubscription.unsubscribe();
+    this._tokenSubscription.unsubscribe();
+    this._errorSubscription.unsubscribe();
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => this._initSlider());
   }
 
   login(): void {
@@ -73,6 +100,10 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.loading = true;
 
     this._auth.login(username, password);
+  }
+
+  private _initSlider(): void {
+    this._slider.initSlider();
   }
 
 }

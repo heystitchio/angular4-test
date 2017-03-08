@@ -9,22 +9,22 @@
             <span class="sr-only">Stitch</span>
           </a>
         </div>
-        <div *ngIf="error">
-          <h3>{{ error }}</h3>
+        <div class="error-contain" *ngIf="error">
+          <p class="text-danger">{{ error }}</p>
         </div>
         <form [formGroup]="loginForm" (ngSubmit)="login()">
           <div class="form-group">
             <label for="email" class="sr-only">Email Address</label>
             <div class="input-group">
               <div class="input-group-addon"><i class="icon-mail"></i></div>
-              <input type="email" class="form-control" name="email" formControlName="email" placeholder="awesome@email.com" required>
+              <input type="email" class="form-control" id="login-email" name="email" formControlName="email" placeholder="awesome@email.com" required>
             </div>
           </div>
           <div class="form-group">
             <label for="password" class="sr-only">Password</label>
             <div class="input-group">
               <div class="input-group-addon"><i class="icon-lock"></i></div>
-              <input type="password" class="form-control" name="password" formControlName="password" placeholder="$up3r$3cr3tp@$$w0rd" required>
+              <input type="password" class="form-control" id="login-password" name="password" formControlName="password" placeholder="$up3r$3cr3tp@$$w0rd" required>
             </div>
           </div>
           <div class="error-block">
@@ -39,9 +39,7 @@
       </section>
     </article>
     <aside class="hidden-sm col-md-6 col-lg-7">
-      <ul>
-        <li>Slide</li>
-      </ul>
+      <slider [id]="'main'" [slides]="slides" [options]="sliderOptions"></slider>
     </aside>
   </div>
 </section>

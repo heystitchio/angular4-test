@@ -6,6 +6,7 @@ article {
 }
 
 aside {
+  padding: 0;
   height: 100vh;
   background-color: #ccc
 }
@@ -27,6 +28,13 @@ loading {
   z-index: 5;
 }
 
+:host >>> #main-swiper {
+  position: relative;
+  background-color: #ccc;
+  height: 100%;
+  overflow: hidden;
+}
+
 .auth-contain {
   overflow: hidden;
 }
@@ -38,6 +46,11 @@ loading {
   height: 46px;
   background:transparent url('https://cdn.heystitch.io/web/common/images/logos/logotype-web.png') no-repeat center center;
   background-size: contain;
+}
+
+.error-contain {
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .form-contain {

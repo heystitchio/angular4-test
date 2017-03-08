@@ -1,10 +1,10 @@
-import { NgModule, ModuleWithProviders }                   from '@angular/core'
-import { CommonModule }                                    from '@angular/common'
-import { RouterModule }                                    from '@angular/router'
-import { ReactiveFormsModule }                             from '@angular/forms'
+import { NgModule, ModuleWithProviders }                      from '@angular/core'
+import { CommonModule }                                       from '@angular/common'
+import { RouterModule }                                       from '@angular/router'
+import { ReactiveFormsModule }                                from '@angular/forms'
 
 import { SharedComponentsModule, ApiService, CacheService,
-         HashService, MetaService }                        from '../'
+         HashService, MetaService, CanActivateWithAuthGuard } from '../'
 
 
 const MODULES = [
@@ -26,7 +26,8 @@ const PROVIDERS = [
   CacheService,
   HashService,
   MetaService,
-  ApiService
+  ApiService,
+  CanActivateWithAuthGuard
 ]
 
 @NgModule({
