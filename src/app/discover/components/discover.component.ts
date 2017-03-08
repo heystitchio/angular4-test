@@ -73,7 +73,7 @@ export class DiscoverComponent implements OnInit, AfterViewInit {
     };
 
     this.mainSlides = [
-      "test",
+      "<h1>test</h1>",
       "test 2",
       "test 3"
     ];
