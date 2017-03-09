@@ -6,6 +6,8 @@ export * from './guards'
 
 export * from './modules'
 
+export * from './pipes'
+
 export * from './services'
 
 export * from './state'

@@ -1,0 +1,14 @@
+<div class="card-contain {{ type }}">
+  <div class="card-header">
+    <div class="card-img" [style.background-image]="'url(' + data?.avatarUrl ? data?.avatarUrl : data?.bannerUrl + ')' | safeStyle">
+      <span class="sr-only">{{ data?.avatarUrl ? data?.avatarUrl : data?.bannerUrl}}</span>
+    </div>
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">{{ data?.title ? data?.title : data?.username }}</h4>
+    <p class="card-text">{{ data?.desc }}</p>
+  </div>
+  <div class="card-footer">
+
+  </div>
+</div>

@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit, Inject,
         ChangeDetectionStrategy, ViewEncapsulation, ViewChild }    from '@angular/core'
 
 import { MetaService, MetaDefinition, ApiService, SliderComponent,
-         SliderOptions }                                           from '../../shared'
+         SliderOptions, CardComponent }                            from '../../shared'
 import gql                                                         from 'graphql-tag';
 
 
@@ -23,6 +23,12 @@ export class DiscoverComponent implements OnInit, AfterViewInit {
   public users: any[] = [];
   public mainSliderOptions: SliderOptions = {};
   public exploreSliderOptions: SliderOptions = {};
+
+  public tempProject: Object = {
+    title: 'Some Title Project',
+    desc: 'Some brief project description outlining the objectives/goals of the project.',
+    bannerUrl: 'https://www.google.com/sky/about_files/messier82.jpg'
+  }
 
   private _metaArray: MetaDefinition[] = [];
 

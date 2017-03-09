@@ -17,7 +17,6 @@ const MODULES = [
 ];
 
 const PIPES = [
-  // put pipes here
 ];
 
 const COMPONENTS = [

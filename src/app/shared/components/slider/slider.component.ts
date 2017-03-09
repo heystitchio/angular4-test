@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Inject, 
-         Input, OnDestroy, ViewEncapsulation }       from '@angular/core'
+         Input, ViewEncapsulation }                  from '@angular/core'
 
 import { SliderOptions }                             from './'
 

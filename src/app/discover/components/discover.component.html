@@ -107,6 +107,7 @@
   </main>
 </section>
 <section class="container">
+  <card [data]="tempProject" [type]="'default'"></card>
   <h5>Recommended</h5>
   <main class="row">
     <div class="col-md-2" *ngFor="let user of users" style="text-align:center;">

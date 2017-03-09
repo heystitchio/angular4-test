@@ -4,7 +4,8 @@ import { RouterModule }                                          from '@angular/
 import { ReactiveFormsModule }                                   from '@angular/forms'
 
 import { MainNavComponent, MainFooterComponent, LoaderComponent,
-         SliderComponent }                                       from './'
+         SliderComponent, CardComponent }                        from './'
+import { SafeStyle }                                             from '../'
 
 const MODULES = [
   CommonModule,
@@ -13,14 +14,15 @@ const MODULES = [
 ];
 
 const PIPES = [
-  // put pipes here
+  SafeStyle
 ];
 
 const COMPONENTS = [
   MainNavComponent,
   MainFooterComponent,
   LoaderComponent,
-  SliderComponent
+  SliderComponent,
+  CardComponent
 ];
 
 const PROVIDERS = [
