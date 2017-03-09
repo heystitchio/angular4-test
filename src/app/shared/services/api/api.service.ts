@@ -3,16 +3,17 @@ import 'rxjs/add/operator/do'
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/share'
 
-import { Inject, Injectable }     from '@angular/core'
-import { Observable }            from 'rxjs/Observable'
-import { Store }                 from '@ngrx/store'
+import { Inject, Injectable }                                from '@angular/core'
+import { Observable }                                        from 'rxjs/Observable'
+import { Store }                                             from '@ngrx/store'
 
-import { Apollo, ApolloQueryObservable } from 'apollo-angular'
-import { ApolloClient, ApolloQueryResult, WatchQueryOptions, MutationOptions, SubscriptionOptions }   from 'apollo-client'
+import { Apollo, ApolloQueryObservable }                     from 'apollo-angular'
+import { ApolloClient, ApolloQueryResult, WatchQueryOptions,
+         MutationOptions, SubscriptionOptions }              from 'apollo-client'
 
-import { CacheService  }         from './../cache'
-import { HashService  }          from './../cache'
-import { Auth }                  from '../../../auth'
+import { CacheService  }                                     from './../cache'
+import { HashService  }                                      from './../cache'
+import { Auth }                                              from '../../../auth'
 
 
 @Injectable()

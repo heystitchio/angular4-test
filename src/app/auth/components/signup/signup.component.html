@@ -1,7 +1,7 @@
 <section class="container-fluid auth-contain">
   <h1 class="sr-only">Sign Up</h1>
   <div class="row">
-    <article class="col-sm-12 col-md-6 col-lg-5">
+    <article class="col-sm-12 col-md-6 col-lg-5 col-xl-4">
       <loading *ngIf="loading"></loading>
       <section *ngIf="!loading" class="form-contain">
         <div class="logo-contain">
@@ -35,11 +35,11 @@
           <button type="submit" class="btn btn-default btn-block">Sign up</button>
         </form>
         <div class="nav-text">
-          <a routerLink="/login">Already have an account? Sign in here.</a>
+          <a routerLink="/login">Already have an account? Log in here.</a>
         </div>
       </section>
     </article>
-    <aside class="hidden-sm col-md-6 col-lg-7">
+    <aside class="hidden-sm col-sm-12 col-md-6 col-lg-7 col-xl-8">
       <slider [id]="'main'" [slides]="slides" [options]="sliderOptions"></slider>
     </aside>
   </div>
