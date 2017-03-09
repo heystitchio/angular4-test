@@ -2,6 +2,11 @@
   border-color: #51677a;
 }
 
+.navbar {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  z-index: 10;
+}
+
 .navbar-btn-icon {
   position: relative;
 }
@@ -50,7 +55,21 @@
 .user-dropdown-toggle {
   margin: 13px 0;
   padding: 0;
+  background-color: transparent;
   border: none;
+  cursor: pointer;
+}
+
+.user-dropdown-menu {
+  top: 90%;
+}
+
+.user-dropdown-menu:before,
+.user-dropdown-menu:after {
+  right: 9px;
+}
+
+.user-dropdown-menu a {
   cursor: pointer;
 }
 

@@ -3,7 +3,8 @@ import { Subscription }                                                     from
 import { Component, ChangeDetectionStrategy, OnDestroy, ViewEncapsulation } from '@angular/core'
 import { Router }                                                           from '@angular/router'
 
-import { AuthModelService,  AuthUser }                                      from '../../../auth'
+import { AuthModelService, AuthUser }                                       from '../../../auth'
+import { Dropdown, DropdownToggle }                                         from '../../'
 
 
 @Component({

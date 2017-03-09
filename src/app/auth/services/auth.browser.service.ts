@@ -29,7 +29,7 @@ const authUserQuery = gql`
       avatarUrl
       email
       emailConfirm
-      name
+      username
       notifications {
         id
       }

@@ -18,18 +18,20 @@
           <li><button type="button" class="btn navbar-btn" routerLink="login">Log in</button></li>
         </ul>
         <ul class="nav navbar-nav navbar-right navbar-action-user-auth"  *ngIf="isAuthenticated()">
-          <li class="dropdown">
-            <a class="dropdown-toggle user-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <img class="user-avatar" [src]="authUser?.avatarUrl" [alt]="authUser?.username">
-              <span class="sr-only">User menu</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a (click)="logout()">Sign out</a></li>
-            </ul>
+          <li>
+            <div class="dropdown" dropdown>
+              <button id="user-dropdown-menu" class="dropdown-toggle user-dropdown-toggle" dropdown-toggle role="button">
+                <img class="user-avatar" [src]="authUser?.avatarUrl" [alt]="authUser?.username">
+                <span class="sr-only">User menu</span>
+              </button>
+              <ul class="dropdown-menu user-dropdown-menu" aria-labelledby="user-dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a (click)="logout()">Sign out</a></li>
+              </ul>
+            </div>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right navbar-action-icon" *ngIf="isAuthenticated()">
