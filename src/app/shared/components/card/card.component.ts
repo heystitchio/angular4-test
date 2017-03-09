@@ -1,7 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input, ViewEncapsulation } from '@angular/core'
 
-import { SafeStyle }                                                    from '../../'
-
 
 @Component({
   changeDetection: ChangeDetectionStrategy.Default,
