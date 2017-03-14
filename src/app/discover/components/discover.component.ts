@@ -24,10 +24,25 @@ export class DiscoverComponent implements OnInit, AfterViewInit {
   public mainSliderOptions: SliderOptions = {};
   public exploreSliderOptions: SliderOptions = {};
 
-  public tempProject: Object = {
+  public tempProject1: Object = {
     title: 'Some Title Project',
+    admin: 'SomeUser1',
+    desc: 'Some brief project description outlining the objectives/goals of the project.',
+    bannerUrl: 'https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111-1500x1000.jpg'
+  }
+
+  public tempProject2: Object = {
+    title: 'Some Title Project',
+    admin: 'SomeUser2',
     desc: 'Some brief project description outlining the objectives/goals of the project.',
     bannerUrl: 'https://www.google.com/sky/about_files/messier82.jpg'
+  }
+
+  public tempProject3: Object = {
+    title: 'Some Title Project',
+    admin: 'SomeUser3',
+    desc: 'Some brief project description outlining the objectives/goals of the project.',
+    bannerUrl: 'https://a.fastcompany.net/multisite_files/fastcompany/imagecache/1280/poster/2016/02/3057232-poster-p-1-this-urban-exploration-app-takes-you-off-the-shortest-route.jpg'
   }
 
   private _metaArray: MetaDefinition[] = [];

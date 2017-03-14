@@ -80,11 +80,22 @@
 
 .user-dropdown-menu:before,
 .user-dropdown-menu:after {
-  right: 9px;
+  right: 16px;
 }
 
 .user-dropdown-menu a {
   cursor: pointer;
+}
+
+.user-dropdown-menu a:hover,
+.user-dropdown-menu a:focus {
+  color: #fff;
+  background-color: #39f;
+}
+
+.user-dropdown-menu a.user-link:hover,
+.user-dropdown-menu a.user-link:focus {
+  background-color: #011627;
 }
 
 .user-avatar {

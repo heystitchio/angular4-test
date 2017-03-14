@@ -44,6 +44,7 @@
     "@ngrx/core": "^1.2.0",
     "@ngrx/store": "^2.2.1",
     "angular2-cookie": "^1.2.6",
+    "angular2-froala-wysiwyg": "^2.5.0-1",
     "apollo-angular": "^0.11.0",
     "apollo-client": "^0.10.0",
     "body-parser": "^1.17.0",

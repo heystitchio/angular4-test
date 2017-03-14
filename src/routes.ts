@@ -5,7 +5,9 @@ export const ROUTES: string[] = [
 
   // Auth
   'login',
+  'login*',
   'signup',
+  'signup*',
   'settings',
 
   // Contact
